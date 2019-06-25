@@ -1,0 +1,11 @@
+/project code/node_modules
+/project code/public/hot
+/project code/public/storage
+/project code/storage/*.key
+/project code/vendor
+/project code/.env
+/project code/.phpunit.result.cache
+/project code/Homestead.json
+/project code/Homestead.yaml
+/project code/npm-debug.log
+/project code/yarn-error.log
