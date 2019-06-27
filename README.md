@@ -5,20 +5,28 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 
 
 
-Project : Healthcare and Medicine Delivery System
-CSE299, Section : 16
-Semester: Summer 2019
+##**Project: Healthcare and Medicine Delivery System**
 
-Faculty: Shaikh Shawon Arefin Shimon
+CSE299, **Section** : 16
+**Semester:** Summer 2019
 
-Submitted By:
+**Faculty:** Shaikh Shawon Arefin Shimon
+
+
+**Submitted By:**
+
 i) Arindam Kabir Ahmed
-ID: 1612010042
-Email : (aarindam.ahmed@northsouth.edu)
-ii) Sidratul Muntaha
-ID: 1611756642
-Email : (sidratul.muntaha02@northsouth.edu)
 
-Project Github Repository:
+**ID:** 1612010042
+
+**Email :** (aarindam.ahmed@northsouth.edu)
+
+
+ii) Sidratul Muntaha
+
+**ID:** 1611756642
+**Email :** (sidratul.muntaha02@northsouth.edu)
+
+**Project Github Repository:**
 (https://github.com/arindamkabir/CSE299-HealthCare-and-Medicine-Delivery-System)
 
