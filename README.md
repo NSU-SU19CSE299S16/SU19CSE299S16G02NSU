@@ -60,3 +60,11 @@ The Healthcare and Medicine Delivery System (HAMDS) is a quick gateway for easie
  9.	The admin user can edit medicine and doctor information (add , delete , update). They can also track all the orders that were placed.
  10.	The application design will be responsive and mobile-friendly.
 
+## 3) Technology: 
+We will use **_Laravel_**, which is a free, open-source PHP web framework, to do all the back-end programming. For the front-end, we will use **_Bootstrap_** which is also a free and open source framework, to design a responsive system which can be viewed flawlessly on mobile screens. We will also use vanilla Javascript in the app. Laravel itself comes with a lot of tools for us to work it, and we will use a lot of them to build this application. 
+
+
+## 4) Monetization/Business plan:
+Monetizing an application is crucial in order to keep it up and running. We are also looking to make profits off this application. To do so, the users will be charged with a base fee of 60 taka every time they order plus the delivery fee which is 50 taka, anywhere inside of Dhaka city. Users will also be charged with a specific fee whenever they book an appointment through the application. This fee will be varied depending on how difficult it is to get the doctor's appointment. This will usually be around 50-200 taka. The fees may be a bit high during the stages of the app’s lifecycle, but it will be lowered as the number of user increases.
+Payments can be made through a number of ways; **Cash On Delivery, bKash, Rocket, uCash and MasterCard/Visa Credit Cards.** The user will be given these choices when placing the order among which he can select the method which is suitable for him/her.  
+
