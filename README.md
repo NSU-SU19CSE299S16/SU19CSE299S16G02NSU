@@ -19,14 +19,14 @@ i) Arindam Kabir Ahmed
 
 **ID:** 1612010042
 
-**Email :** (aarindam.ahmed@northsouth.edu)
+**Email :** aarindam.ahmed@northsouth.edu
 
 
 ii) Sidratul Muntaha
 
 **ID:** 1611756642
-**Email :** (sidratul.muntaha02@northsouth.edu)
+**Email :** sidratul.muntaha02@northsouth.edu
 
 **Project Github Repository:**
-(https://github.com/arindamkabir/CSE299-HealthCare-and-Medicine-Delivery-System)
+https://github.com/arindamkabir/CSE299-HealthCare-and-Medicine-Delivery-System
 
