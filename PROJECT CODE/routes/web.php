@@ -31,7 +31,7 @@ Route::resource('doctor', 'DoctorController');
 
 Route::resource('Order', 'OrderController');
 
-Route::get('/', DoctorController@index () {
+Route::get('/' , DoctorController@index () {
 
 Route::get('/doctor', function () {
         return view('admin.doctor');
