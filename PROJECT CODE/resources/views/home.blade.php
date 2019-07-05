@@ -19,5 +19,16 @@
             </div>
         </div>
     </div>
+
+<div class="row justify-content-center">
+    <form class="form-inline">
+        <div class="form-group mb-2">
+            <label for="searchHome" class="sr-only">Search</label>
+            <input type="text" class="form-control" id="searchHome" placeholder="Search For Medicines or Doctors">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+    </form>
+</div>
+
 </div>
 @endsection
