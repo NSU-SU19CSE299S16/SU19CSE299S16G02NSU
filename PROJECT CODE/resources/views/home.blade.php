@@ -20,15 +20,14 @@
         </div>
     </div>
 
-<div class="row justify-content-center">
-    <form class="form-inline">
-        <div class="form-group mb-2">
-            <label for="searchHome" class="sr-only">Search</label>
-            <input type="text" class="form-control" id="searchHome" placeholder="Search For Medicines or Doctors">
+    <div class="row justify-content-center text-center my-4">
+        <div class="col-md-9">
+            <form>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                <button type="submit" class="btn btn-outline-dark my-2">Search</button>   
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Search</button>
-    </form>
-</div>
+    </div>
 
 </div>
 @endsection
