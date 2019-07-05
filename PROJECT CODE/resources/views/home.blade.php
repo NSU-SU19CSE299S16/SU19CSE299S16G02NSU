@@ -32,24 +32,30 @@
     </div>
 
     <!-- This part will have images of the featured medicines, or some images of famous doctors (?) -->
-    <ul class="nav nav-pills">
-        <li class="active"><a data-toggle="pill" href="#feature1">Featured Medicines</a></li>
-        <li><a data-toggle="pill" href="#feature2">Featured Doctors</a></li>
-        <li><a data-toggle="pill" href="#feature3">Emergency</a></li>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-feature1-tab"  data-toggle="pill" href="#feature1" role="tab" aria-controls="feature1" aria-selected="true">Featured Medicines</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-feature2-tab"  data-toggle="pill" href="#feature2" role="tab" aria-controls="feature2" aria-selected="false">Featured Doctors</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-feature3-tab"  data-toggle="pill" href="#feature3" role="tab" aria-controls="feature3" aria-selected="false">Emergency</a>
+        </li>
     </ul>
 
     <!-- insert actual content -->
 
-    <div class="tab-content">
-    <div id="feature1" class="tab-pane fade in active">
+    <div class="tab-content" id="pills-tabContent">
+    <div id="feature1" class="tab-pane fade active" role="tabpanel" aria-labelledby="pills-feature1-tab">
       <h3>Featured Medicines</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, amet.</p>
     </div>
-    <div id="feature2" class="tab-pane fade">
+    <div id="feature2" class="tab-pane fade" role="tabpanel" aria-labelledby="pills-feature2-tab">
       <h3>Featured Doctors</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, autem?</p>
     </div>
-    <div id="feature3" class="tab-pane fade">
+    <div id="feature3" class="tab-pane fade" role="tabpanel" aria-labelledby="pills-feature3-tab">
       <h3>Emergency</h3>
       <p>;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, enim?</p>
     </div>
