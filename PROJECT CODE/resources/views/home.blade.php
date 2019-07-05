@@ -23,7 +23,11 @@
     <div class="row justify-content-center text-center my-4">
         <div class="col-md-9">
             <form>
+<<<<<<< HEAD
                 <input type="text" class="form-control" id="searchHome" placeholder="Search for medicine and doctors across Dhaka!">
+=======
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+>>>>>>> 7a2c39f23d9827f72d0921504738447f1b8c5dcd
                 <button type="submit" class="btn btn-outline-dark my-2">Search</button>   
             </form>
         </div>
