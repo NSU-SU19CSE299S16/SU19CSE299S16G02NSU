@@ -37,5 +37,6 @@ Route::get('/doctor', function () {
 });
 
 Route::get('/','DoctorController@index');
+Route::get('/','DoctorController@about');
 
     
