@@ -35,4 +35,7 @@ Route::resource('Order', 'OrderController');
 Route::get('/doctor', function () {
         return view('admin.doctor');
 });
+
+Route::get('/','DoctorController@index');
+
     
