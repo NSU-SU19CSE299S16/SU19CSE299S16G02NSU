@@ -42,6 +42,7 @@ Route::get('/','DoctorController@services');
 
 Route::get('/','MedicineController@index');
 Route::get('/','MedicineController@about');
+Route::get('/','MedicineController@services');
 
 
     
