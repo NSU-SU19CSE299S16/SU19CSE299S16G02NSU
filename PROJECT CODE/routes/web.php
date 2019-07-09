@@ -36,9 +36,9 @@ Route::get('/doctor', function () {
         return view('admin.doctor');
 });
 
-Route::get('/','DoctorController@index');
-Route::get('/','DoctorController@about');
-Route::get('/','DoctorController@services');
+// Route::get('/','DoctorController@index');
+// Route::get('/','DoctorController@about');
+// Route::get('/','DoctorController@services');
 
 
 
