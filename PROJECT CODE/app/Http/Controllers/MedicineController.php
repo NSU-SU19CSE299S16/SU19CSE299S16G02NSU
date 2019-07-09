@@ -1,20 +1,32 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 
 class MedicineController extends Controller
 {
+
+    //show all medicines
     public function index(){
-        return view('admin.index');
+
+        $medicines = DB::table('medicines')->get();
+
+        return view('medicine.medicines', ['medicines' => $medicines]);
     }
 
-    public function about(){
-        return view('admin.about');
+    //show a specific medicine
+    public function show($id){
+        $medicine = DB::table('medicines')->where('med_id', $id)->first();
+        return view('medicine.medicine', ['medicine' => $medicine]);
     }
-    public function services(){
-        return view('admin.services');
+
+    //show all medicine (admin panel)
+    public function adminIndex(){
+        $medicines = DB::table('medicines')->get();
+
+        return view('admin.medicine.medicines', ['medicines' => $medicines]);
     }
+
    
 }
