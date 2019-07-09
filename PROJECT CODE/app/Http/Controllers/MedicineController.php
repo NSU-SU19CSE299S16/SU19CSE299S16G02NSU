@@ -13,6 +13,10 @@ class MedicineController extends Controller
         return view('medicine.medicines', ['medicines' => $medicines]);
     }
 
+    public function show($id){
+
+        echo $id;
+    }
 
    
 }

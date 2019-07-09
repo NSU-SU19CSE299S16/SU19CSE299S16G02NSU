@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-md-2 text-center">
                 @foreach($medicines as $medicine)
-                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">{{$medicine->med_name}}</a>
+                    <a href="{{route('medicine.show', ['id' => $medicine->med_id])}}" class="list-group-item list-group-item-action list-group-item-info">{{$medicine->med_name}}</a>
                 @endforeach
             </div>
         </div>
