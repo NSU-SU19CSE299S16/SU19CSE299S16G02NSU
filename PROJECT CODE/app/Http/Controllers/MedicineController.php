@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class MedicineController extends Controller
 {
+
+    //show all medicines
     public function index(){
 
         $medicines = DB::table('medicines')->get();
@@ -13,9 +15,10 @@ class MedicineController extends Controller
         return view('medicine.medicines', ['medicines' => $medicines]);
     }
 
+    //show a specific medicine
     public function show($id){
-
-        echo $id;
+        $medicine = DB::table('medicines')->where('med_id', $id)->first();
+        return view('medicine.medicine', ['medicine' => $medicine]);
     }
 
    
