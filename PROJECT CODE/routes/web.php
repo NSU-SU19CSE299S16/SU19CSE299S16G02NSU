@@ -31,10 +31,7 @@ Route::resource('doctor', 'DoctorController');
 
 Route::resource('Order', 'OrderController');
 
-Route::get('/admin/medicine', function () {
-    return view('admin.medicine.medicines');
-});
-
+Route::get('/admin/medicine','MedicineController@adminIndex');
 Route::get('/doctor', function () {
         return view('admin.doctor');
 });
