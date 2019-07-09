@@ -13,5 +13,8 @@ class MedicineController extends Controller
     public function about(){
         return view('admin.about');
     }
+    public function services(){
+        return view('admin.services');
+    }
    
 }
