@@ -21,5 +21,12 @@ class MedicineController extends Controller
         return view('medicine.medicine', ['medicine' => $medicine]);
     }
 
+    //show all medicine (admin panel)
+    public function adminIndex(){
+        $medicines = DB::table('medicines')->get();
+
+        return view('admin.medicine.medicines', ['medicines' => $medicines]);
+    }
+
    
 }
