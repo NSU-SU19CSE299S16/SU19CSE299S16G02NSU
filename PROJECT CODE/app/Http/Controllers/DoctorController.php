@@ -18,4 +18,10 @@ class DoctorController extends Controller
     public function services(){
         return view('admin.services');
     }
+
+    //show all doctors
+    public function index(){
+
+    }
+
 }
