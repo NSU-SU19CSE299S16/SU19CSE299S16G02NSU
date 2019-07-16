@@ -6,10 +6,10 @@
     <form>
         <div class="form-row">
             <div class="col">
-            <input type="text" class="form-control" placeholder="Medicine Name">
+            <input type="text" name="name" class="form-control" placeholder="Medicine Name">
             </div>
             <div class="col">
-            <input type="text" class="form-control" placeholder="Stock">
+            <input type="text" name="stock" class="form-control" placeholder="Stock">
             </div>
         </div>
         <button type="submit" class="btn btn-primary my-3">Add</button>

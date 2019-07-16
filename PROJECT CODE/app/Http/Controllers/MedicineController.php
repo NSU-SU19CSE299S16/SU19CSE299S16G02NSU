@@ -21,6 +21,21 @@ class MedicineController extends Controller
     public function create(){
     
         return view('admin.medicine.addmedicine');
+
+    }
+
+    //store a row into the database
+
+    public function store(Request $request){
+
+        DB::table('medicine')->insert(
+            [
+                'med_name' => $request->name,
+                'med_stock' => $request->stock
+            
+            ]
+        );
+
     }
 
     //show a specific medicine
