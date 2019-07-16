@@ -16,6 +16,9 @@
                 <td>{{$doctor->created_at}}</td>
                 <td>{{$doctor->updated_at}}</td>
                 </tr>  
+                <td><button class="btn btn-danger">DELETE</button></td>
+                <td><button class="btn btn-info">UPDATE</button></td>
+               
             @endforeach
         </tbody>
     </table>
