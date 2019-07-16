@@ -40,6 +40,10 @@ class MedicineController extends Controller
 
     }
 
+    public function destroy($id){
+        echo $id;
+    }
+
     //show a specific medicine
     public function show($id){
         $medicine = DB::table('medicines')->where('med_id', $id)->first();
