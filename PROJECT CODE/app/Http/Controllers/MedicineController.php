@@ -43,7 +43,6 @@ class MedicineController extends Controller
     public function destroy($id){
 
         DB::table('medicines')->where('med_id', $id)->delete();
-        return redirect()->route('admin.medicine');
         
     }
 

@@ -28,8 +28,7 @@
                 <td>{{$medicine->updated_at}}</td>
                 <td>
                 <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
-                @csrf
-                <button class="btn btn-danger">DELETE</button>
+                <button type="submit" class="btn btn-danger">DELETE</button>
                 </form>
                 </td>
                 <td><button class="btn btn-info">UPDATE</button></td>
