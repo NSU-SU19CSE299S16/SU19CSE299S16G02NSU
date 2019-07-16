@@ -5,12 +5,13 @@
 <form>
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Medicine Name">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input type="text" class="form-control" placeholder="Stock">
     </div>
   </div>
+  <button type="submit" class="btn btn-primary">Add</button>
 </form>
 
 @endsection
