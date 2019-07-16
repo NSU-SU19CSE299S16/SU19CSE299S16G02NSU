@@ -28,7 +28,7 @@ class MedicineController extends Controller
 
     public function store(Request $request){
 
-        DB::table('medicine')->insert(
+        DB::table('medicines')->insert(
             [
                 'med_name' => $request->name,
                 'med_stock' => $request->stock
