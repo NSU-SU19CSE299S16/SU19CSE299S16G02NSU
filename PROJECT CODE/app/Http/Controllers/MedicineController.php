@@ -15,6 +15,14 @@ class MedicineController extends Controller
         return view('medicine.medicines', ['medicines' => $medicines]);
     }
 
+
+    //show the add medicine form
+
+    public function create(){
+    
+        return view('admin.medicine.addmedicine');
+    }
+
     //show a specific medicine
     public function show($id){
         $medicine = DB::table('medicines')->where('med_id', $id)->first();

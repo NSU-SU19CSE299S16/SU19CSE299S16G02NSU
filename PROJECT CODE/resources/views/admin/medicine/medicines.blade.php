@@ -4,7 +4,7 @@
 <div class="container">
     <h4 class="text-center lead">All Medicines</h4>
 
-    <a href=""><button class="btn btn-primary">Add New Medicine</button></a>
+    <div class="text-center py-3"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
 
     <table class="table table-hover table-info">
         <thead>
