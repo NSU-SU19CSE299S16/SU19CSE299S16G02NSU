@@ -4,6 +4,8 @@
 <div class="container">
     <h4 class="text-center lead">All Medicines</h4>
 
+    <a href=""><button class="btn btn-primary">Add New Medicine</button></a>
+
     <table class="table table-hover table-info">
         <thead>
             <tr class="bg-info">
