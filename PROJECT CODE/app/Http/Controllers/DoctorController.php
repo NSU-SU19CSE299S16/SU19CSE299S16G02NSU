@@ -27,8 +27,9 @@ class DoctorController extends Controller
 
     //show a specific doctor
     public function show($id){
-
-    }
+        $doctor = DB::table('doctors')->where('doc_id', $id)->first();
+        return view('doctor.doctors', ['doctor' => $doctor]);
+        }
     
     //show all doctor (admin panel)
     public function adminIndex(){
