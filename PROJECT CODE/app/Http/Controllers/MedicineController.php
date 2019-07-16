@@ -36,6 +36,8 @@ class MedicineController extends Controller
             ]
         );
 
+        return redirect()->route('admin.medicine');
+
     }
 
     //show a specific medicine
