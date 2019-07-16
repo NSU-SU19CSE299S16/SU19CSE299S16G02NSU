@@ -9,8 +9,10 @@
             @foreach($doctors as $doctor)
              <tr>
                 <th scope="row">{{$doctor->doc_id}}</th>
-                <td>{{$doctor->med_name}}</td>
-                <td>{{$doctor->med_spec}}</td> 
+                <td>{{$doctor->doc_name}}</td>
+                <td>{{$doctor->doc_spec}}</td> 
+                <td>{{$doctor->doc_hospital}}</td> 
+                </tr>  
             @endforeach
         </tbody>
     </table>
