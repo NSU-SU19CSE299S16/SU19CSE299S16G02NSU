@@ -24,6 +24,10 @@ class DoctorController extends Controller
     public function show($id){
 
     }
+    
+    //show all doctor (admin panel)
+    public function adminIndex(){
+    }
 
     
 }
