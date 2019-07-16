@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
-    public function index(){
-        return view('admin.index');
-    }
-
+    
     
     public function about(){
         return view('admin.about');
@@ -21,7 +18,14 @@ class DoctorController extends Controller
 
     //show all doctors
     public function index(){
+    }
+
+    //show a specific doctor
+    public function show($id){
 
     }
 
+    
 }
+
+
