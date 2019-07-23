@@ -75,11 +75,13 @@
 
         <div class="cotainer">
             <div class="row">
-                <div class="sidebar col-md-2 d-none d-md-block bg-dark">
+                <div class="sidebar col-md-2 d-none d-md-block bg-dark text-white">
                     <div class="sidebar-sticky">
-                    <ul class="nav">
-                    <li class="nav-item">Doctors</li>
-                    </ul>
+                        <ul class="nav flex-column">
+                            <li class="nav-item "><a class="nav-link active" href="#">Doctors</a></li>
+                            <li class="nav-item "><a class="nav-link active" href="#">Medicines</a></li>
+                            <li class="nav-item "><a class="nav-link active" href="#">Orders</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
