@@ -24,6 +24,12 @@
         
             <div class="row">
                 <div class="sidebar col-md-2 d-none d-md-block bg-dark">
+                
+                <div class="logo">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                </div>
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">
                             <li class="nav-item sidebar-item"><a class="nav-link active" href="#">Dashboard</a></li>
@@ -39,9 +45,6 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -92,7 +95,7 @@
         <div class="cotainer">
             
             @yield('content')
-            
+
         </div>
         </main>
         </div>
