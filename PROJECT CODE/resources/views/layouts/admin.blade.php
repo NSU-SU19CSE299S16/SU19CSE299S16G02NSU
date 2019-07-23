@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -75,10 +75,11 @@
 
         <div class="cotainer">
             <div class="row">
-                <div class="sidebar col-md-2 d-none d-md-block bg-light">
+                <div class="sidebar col-md-2 d-none d-md-block bg-dark">
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">
-                            <li class="nav-item sidebar-item"><a class="nav-link active" href="#">Doctors</a></li>
+                            <li class="nav-item sidebar-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                            <li class="nav-item sidebar-item"><a class="nav-link" href="#">Doctors</a></li>
                             <li class="nav-item "><a class="nav-link active" href="#">Medicines</a></li>
                             <li class="nav-item "><a class="nav-link active" href="#">Orders</a></li>
                         </ul>

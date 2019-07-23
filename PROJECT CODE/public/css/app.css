@@ -11104,13 +11104,26 @@ searchBar {
   width: 100%;
 }
 
-.sidebar .nav-item,
-.sidebar .nav-link {
-  color: #333 !important;
-  padding-top: 0.5rem;
+a {
+  text-decoration: none;
 }
 
-.sidebar a {
-  text-decoration: none;
+div {
+  display: block;
+}
+
+.sidebar .nav-link {
+  color: #fff !important;
+  padding: 0.5rem, 1rem;
+  font-weight: 500;
+}
+
+.sidebar-sticky {
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 

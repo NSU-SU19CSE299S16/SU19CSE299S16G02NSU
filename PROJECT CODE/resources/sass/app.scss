@@ -10,13 +10,27 @@
 searchBar{
     width:100%;
 }
+a{
+    text-decoration: none;
+}
 
-.sidebar{
-    .nav-item, .nav-link{
-        color: #333 !important;
-        padding-top: 0.5rem;
+
+div {
+    display: block;
+}
+.sidebar{    
+    .nav-link{
+        color: #fff !important;
+        padding: 0.5rem, 1rem;
+        font-weight: 500;
     }
-    a{
-        text-decoration: none;
-    }
+    
+}
+
+.sidebar-sticky{
+    height: 100vh;
+    position: sticky;
+    padding-top: .5rem;    
+    overflow-x: hidden;
+    overflow-y: auto;
 }
