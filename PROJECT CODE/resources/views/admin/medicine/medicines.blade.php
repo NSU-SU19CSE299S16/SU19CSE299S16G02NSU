@@ -4,6 +4,8 @@
 <div class="container">
     <h4 class="text-center lead">All Medicines</h4>
 
+    <div class="text-center py-3"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+
     <table class="table table-hover table-info">
         <thead>
             <tr class="bg-info">
@@ -24,7 +26,11 @@
                 <td>{{$medicine->med_stock}}</td>
                 <td>{{$medicine->created_at}}</td>
                 <td>{{$medicine->updated_at}}</td>
-                <td><button class="btn btn-danger">DELETE</button></td>
+                <td>
+                <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
+                <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+                </td>
                 <td><button class="btn btn-info">UPDATE</button></td>
                 </tr>
             @endforeach

@@ -37,7 +37,7 @@
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Medicines</a>
+                            <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Doctors</a>
