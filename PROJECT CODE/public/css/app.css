@@ -11100,3 +11100,17 @@ a.text-dark:focus {
   }
 }
 
+searchBar {
+  width: 100%;
+}
+
+.sidebar .nav-item,
+.sidebar .nav-link {
+  color: #333 !important;
+  padding-top: 0.5rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+

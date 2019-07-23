@@ -10,3 +10,13 @@
 searchBar{
     width:100%;
 }
+
+.sidebar{
+    .nav-item, .nav-link{
+        color: #333 !important;
+        padding-top: 0.5rem;
+    }
+    a{
+        text-decoration: none;
+    }
+}
