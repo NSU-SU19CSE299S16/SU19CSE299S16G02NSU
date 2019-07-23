@@ -32,19 +32,16 @@ Route::resource('doctor', 'DoctorController');
 Route::resource('Order', 'OrderController');
 
 
-Route::get('/admin/medicine','MedicineController@adminIndex')->name('admin.medicine');
+Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medicines');
 
-Route::get('/doctor', function () {
-        return view('admin.doctor');
-});
+
+Route::get('/admin/doctors','MedicineController@adminIndex')->name('admin.doctors');
+
 
 Route::get('/admin', function() {
     return view('admin.index');
 });
 
-// Route::get('/','DoctorController@index');
-// Route::get('/','DoctorController@about');
-// Route::get('/','DoctorController@services');
 
 
 
