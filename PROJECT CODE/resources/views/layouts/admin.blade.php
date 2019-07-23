@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -71,6 +71,19 @@
                 </div>
             </div>
         </nav>
+
+
+        <div class="cotainer">
+            <div class="row">
+                <div class="sidebar col-md-2 d-none d-md-block bg-dark">
+                    <div class="sidebar-sticky">
+                    <ul class="nav">
+                    <li class="nav-item">Doctors</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <main class="py-4">
             @yield('content')
