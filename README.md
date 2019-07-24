@@ -1,7 +1,13 @@
 # SU19CSE299S16G02NSU
 CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 
-![north-south-university-logo](https://user-images.githubusercontent.com/51095007/60244697-c06b5f00-98dc-11e9-8f7b-5988019271b1.png)
+
+<p align="center">
+  <img width="30%" src="https://user-images.githubusercontent.com/51095007/60244697-c06b5f00-98dc-11e9-8f7b-5988019271b1.png">
+</p>
+
+<br>
+<br>
 
 
 
