@@ -12,8 +12,8 @@
             <th scope="col">Specialized in</th>
             <th scope="col">Hospital</th>
             <th scope="col">Contact number</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col">Created</th>
+            <th scope="col">Updated</th>
        
        
             </tr>
