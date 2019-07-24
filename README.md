@@ -1,17 +1,18 @@
 # SU19CSE299S16G02NSU
 CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 
+<br>
 
 <p align="center">
   <img width="30%" src="https://user-images.githubusercontent.com/51095007/60244697-c06b5f00-98dc-11e9-8f7b-5988019271b1.png">
 </p>
 
 <br>
-<br>
 
 
 
-## **Project: Healthcare and Medicine Delivery System**
+
+<h1 align="center">Project: Healthcare and Medicine Delivery System</h1>
 
 CSE299, **Section** : 16
 **Semester:** Summer 2019
