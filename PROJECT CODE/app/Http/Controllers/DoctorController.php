@@ -49,9 +49,12 @@ class DoctorController extends Controller
         );
 
         return redirect()->route('admin.doctors');
-
-
     }
+    public function edit($id){
+        $doctor = DB::table('doctors')->where('doc_id', $id)->first();
+        return view('admin.dpctpr.edit', ['doctor' => $doctor]);
+    }
+
 
 
 
