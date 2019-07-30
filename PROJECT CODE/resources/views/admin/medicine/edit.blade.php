@@ -4,6 +4,7 @@
 <div class="container">
     <h4 class="text-center lead">Add a new medicine</h4>
     <form method="POST" action="{{route('medicine.store')}}">
+    {{ method_field('PUT') }}
     @csrf
         <div class="form-row">
             <div class="col">
