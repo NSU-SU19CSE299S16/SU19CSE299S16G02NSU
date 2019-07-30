@@ -7,8 +7,10 @@
 
         <div class="row justify-content-center">
             <div class="col-md-2 text-center">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$doctor->doc_name}}</a>
-                
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$doctor->doc_name}}</a>   
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$doctor->}}</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">$2.00</a>
+  
             </div>
 
             
