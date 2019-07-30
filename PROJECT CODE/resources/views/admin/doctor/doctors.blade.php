@@ -27,8 +27,12 @@
                 <td>{{$doctor->doc_contact}}</td>
                 <td>{{$doctor->created_at}}</td>
                 <td>{{$doctor->updated_at}}</td>
-                
                 <td>
+                <form action="{{route('doctor.destroy', ['id' => $doctor->doc_id])}}" method="DELETE">
+                <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+               
+
 
     </tbody>
     </table>
