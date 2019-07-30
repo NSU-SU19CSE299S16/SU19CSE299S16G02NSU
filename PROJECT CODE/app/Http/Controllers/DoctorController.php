@@ -67,7 +67,14 @@ class DoctorController extends Controller
     public function update($id, Request $request){
         DB::table('doctors')
             ->where('doc_id', $id)
+            ->update(
+                [
+                    'doc_name' => $request->name,
+                    'doc_spec' => $request->spec
+                ]
+        );
 
+        return redirect()->route('admin.dpctors');
     }
 
 
