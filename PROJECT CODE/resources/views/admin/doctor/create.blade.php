@@ -13,12 +13,8 @@
             <input type="text" name="spec" class="form-control" placeholder="Specialized in">
             </div>
         </div>
-
-    
-
-    
-   
+    <button type="submit" class="btn btn-primary my-3">Add</button>
+    </form>
 </div>
 @endsection
-
 
