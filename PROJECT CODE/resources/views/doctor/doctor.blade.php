@@ -11,14 +11,9 @@
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$doctor->doc_name}}</a>   
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$doctor->doc_spec}}</a>
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">$2.00</a>
-  
             </div>
-
-            
         </div>
-
-
-    <div class="list-group mt-5">
     </div>
 </div>
 @endsection
+
