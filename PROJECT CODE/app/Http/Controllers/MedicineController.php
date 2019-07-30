@@ -40,11 +40,17 @@ class MedicineController extends Controller
 
     }
 
+    public function edit($id){
+        $medicine = DB::table('medicines')->where('med_id', $id)->first();
+        return view('medicine.medicine', ['medicine' => $medicine]);
+    }
+    
     public function destroy($id){
 
         DB::table('medicines')->where('med_id', $id)->delete();
         
     }
+
 
     //show a specific medicine
     public function show($id){
