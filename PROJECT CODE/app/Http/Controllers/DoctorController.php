@@ -37,6 +37,23 @@ class DoctorController extends Controller
 
     }
 
+    //store a row into the database
+
+    public function store(Request $request){
+        
+        DB::table('doctors')->insert(
+            [ 
+                'doc_name' => $request->name,
+                'doc_spec' => $request->spec
+            ]
+        );
+
+        return redirect()->route('admin.doctors');
+
+
+    }
+
+
 
     
 }
