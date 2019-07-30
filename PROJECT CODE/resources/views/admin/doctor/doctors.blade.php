@@ -17,27 +17,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td>Mark Roberts</td>
-        <td>Cardio</td>
-        <td>Square Hospitals</td>
-        <td>069696969696</td>
-        </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Mark Roberts</td>
-        <td>Cardio</td>
-        <td>Square Hospitals</td>
-        <td>069696969696</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td>Mark Roberts</td>
-        <td>Cardio</td>
-        <td>Square Hospitals</td>
-        <td>069696969696</td>
-        </tr>
+    
+            @foreach($doctors as $doctor)
+                <tr>
+                <th scope="row">{{$doctor->doc_id}}</th>
+                <td>{{$doctor->doc_name}}</td>
+                <td>{{$doctor->doc_spec}}</td>
+                <td>
+
     </tbody>
     </table>
 </div>
