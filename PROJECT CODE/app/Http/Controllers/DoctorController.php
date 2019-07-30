@@ -50,10 +50,20 @@ class DoctorController extends Controller
 
         return redirect()->route('admin.doctors');
     }
+
+    //Edit 
     public function edit($id){
         $doctor = DB::table('doctors')->where('doc_id', $id)->first();
-        return view('admin.dpctpr.edit', ['doctor' => $doctor]);
+        return view('admin.doctor.edit', ['doctor' => $doctor]);
     }
+
+    //delete
+    public function destroy($id){
+
+        DB::table('doctors')->where('doc_id', $id)->delete();
+        
+    }
+
 
 
 
