@@ -12,8 +12,8 @@
             <input type="text" name="Specialized" class="form-control" placeholder="{{$doc->doc_spec}}">
             </div>
         </div>
-
-
+        <button type="submit" class="btn btn-primary my-3">UPDATE</button>
+    </form>
 </div>
-
 @endsection
+
