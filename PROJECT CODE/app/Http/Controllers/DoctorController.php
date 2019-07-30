@@ -64,6 +64,10 @@ class DoctorController extends Controller
         
     }
 
+    public function update($id, Request $request){
+     
+    }
+
 
 
 
