@@ -14,7 +14,7 @@
             <input type="text" name="stock" class="form-control" placeholder="{{$medicine->med_stock}}">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary my-3">Add</button>
+        <button type="submit" class="btn btn-primary my-3">UPDATE</button>
     </form>
 </div>
 @endsection

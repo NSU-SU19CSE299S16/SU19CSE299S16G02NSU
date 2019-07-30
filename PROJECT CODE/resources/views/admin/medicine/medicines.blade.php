@@ -31,7 +31,11 @@
                 <button type="submit" class="btn btn-danger">DELETE</button>
                 </form>
                 </td>
-                <td><button class="btn btn-info">UPDATE</button></td>
+                <td>
+                <form action="{{route('medicine.edit', ['id' => $medicine->med_id])}}" method="GET">
+                <button type="submit" class="btn btn-info">EDIT</button>
+                </form>
+                </td>
                 </tr>
             @endforeach
         </tbody>
