@@ -29,6 +29,15 @@ class DoctorController extends Controller
     
     }
 
+    //show the add doctor form
+
+    public function create(){
+    
+        return view('admin.doctor.adddoctor');
+
+    }
+
+
     
 }
 
