@@ -65,7 +65,9 @@ class DoctorController extends Controller
     }
 
     public function update($id, Request $request){
-     
+        DB::table('doctors')
+            ->where('doc_id', $id)
+
     }
 
 
