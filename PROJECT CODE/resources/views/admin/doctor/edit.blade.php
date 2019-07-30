@@ -8,7 +8,11 @@
             <div class="col">
             <input type="text" name="name" class="form-control" placeholder="{{$doctor->doc_name}}">
             </div>
-   
+            <div class="col">
+            <input type="text" name="Specialized" class="form-control" placeholder="{{$doc->doc_spec}}">
+            </div>
+        </div>
+
 
 </div>
 
