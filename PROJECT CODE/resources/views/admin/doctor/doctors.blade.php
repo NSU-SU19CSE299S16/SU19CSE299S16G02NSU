@@ -31,10 +31,18 @@
                 <form action="{{route('doctor.destroy', ['id' => $doctor->doc_id])}}" method="DELETE">
                 <button type="submit" class="btn btn-danger">DELETE</button>
                 </form>
-               
-
-
-    </tbody>
+                </td>
+                <td>
+                <form action="{{route('doctor.edit', ['id' => $doctor->doc_id])}}" method="GET">
+                <button type="submit" class="btn btn-info">EDIT</button>
+                </form>
+                </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
+
+    </div>
 </div>
 @endsection
+
