@@ -3,6 +3,10 @@
 @section('content')
 <div class="contaniner">
 <h4 class="text-center lead">All Doctors</h4>
+<div class="text-center py-3"><a href="{{route('doctor.create')}}"><button class="btn btn-primary ">Add New Doctor</button></a></div>
+
+    <table class="table table-hover table-info">
+
  <thead>
         <tr>
         <th scope="col">#</th>
