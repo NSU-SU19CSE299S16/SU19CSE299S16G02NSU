@@ -9,6 +9,11 @@
             <div class="col">
             <input type="text" name="name" class="form-control" placeholder="Doctor Name">
             </div>
+            <div class="col">
+            <input type="text" name="spec" class="form-control" placeholder="Specialized in">
+            </div>
+        </div>
+
     
 
     
