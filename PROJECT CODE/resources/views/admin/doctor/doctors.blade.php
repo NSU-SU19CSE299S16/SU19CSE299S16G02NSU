@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="contaniner">
-    <table class="table table-striped table-dark">
-    <thead>
+<h4 class="text-center lead">All Doctors</h4>
+ <thead>
         <tr>
         <th scope="col">#</th>
         <th scope="col">Doctor Name</th>
