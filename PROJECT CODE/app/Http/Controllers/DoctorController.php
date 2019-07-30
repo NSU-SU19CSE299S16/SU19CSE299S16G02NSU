@@ -74,7 +74,7 @@ class DoctorController extends Controller
                 ]
         );
 
-        return redirect()->route('admin.dpctors');
+        return redirect()->route('admin.doctors');
     }
 
 
