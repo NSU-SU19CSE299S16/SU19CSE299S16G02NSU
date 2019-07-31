@@ -34,7 +34,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cart::add($request->med_id, 'Product 1', 1, 9.99, 550);
     }
 
     /**

@@ -31,6 +31,9 @@ Route::resource('doctor', 'DoctorController');
 
 Route::resource('Order', 'OrderController');
 
+Route::resource('Ordecartr', 'CartController');
+
+
 
 Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medicines');
 
