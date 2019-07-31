@@ -31,7 +31,7 @@ Route::resource('doctor', 'DoctorController');
 
 Route::resource('Order', 'OrderController');
 
-Route::resource('Ordecartr', 'CartController');
+Route::resource('cart', 'CartController');
 
 
 
