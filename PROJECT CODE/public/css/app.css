@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500&display=swap);@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11098,5 +11098,53 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+searchBar {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Open-sans", sans-serif;
+}
+
+.navbar-brand {
+  font-family: "Monoton", cursive;
+  font-size: 2rem;
+}
+
+.logo {
+  font-family: "Monoton", cursive;
+  font-size: 2rem;
+  padding: 0.5rem, 1rem;
+  text-align: center;
+}
+
+.logo .navbar-brand {
+  color: #fff !important;
+}
+
+div {
+  display: block;
+}
+
+.sidebar .nav-link {
+  color: #fff !important;
+  padding: 0.5rem, 1rem;
+  font-weight: 600;
+}
+
+.sidebar-sticky {
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 

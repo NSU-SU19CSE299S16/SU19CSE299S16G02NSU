@@ -10,7 +10,7 @@
             <div class="col-md-2 text-center">
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_name}}</a>
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_stock}}</a>
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">$2.00</a>
+                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_price}} Taka</a>
                 
                 <form class="mt-3">
                     <button type="submit" class="btn btn-success text-center">Add to cart</button>

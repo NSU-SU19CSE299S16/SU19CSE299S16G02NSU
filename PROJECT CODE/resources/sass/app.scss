@@ -1,6 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 // Variables
 @import 'variables';
 
@@ -9,4 +10,47 @@
 
 searchBar{
     width:100%;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    font-family: 'Open-sans', sans-serif;
+}
+.navbar-brand{
+
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+
+}
+.logo{
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    padding: 0.5rem, 1rem;
+    text-align: center;
+    
+    .navbar-brand{
+        color: #fff !important;
+    }
+}
+
+
+div {
+    display: block;
+}
+.sidebar{    
+    .nav-link{
+        color: #fff !important;
+        padding: 0.5rem, 1rem;
+        font-weight: 600;
+    }
+    
+}
+
+.sidebar-sticky{
+    height: 100vh;
+    position: sticky;
+    padding-top: .5rem;    
+    overflow-x: hidden;
+    overflow-y: auto;
 }

@@ -3,18 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class DoctorController extends Controller
 {
-    
-    
-    public function about(){
-        return view('admin.about');
-    }
-    
-    public function services(){
-        return view('admin.services');
-    }
 
     //show all doctors
     public function index(){
@@ -36,6 +28,58 @@ class DoctorController extends Controller
         return view('admin.doctor.doctors', ['doctors' => $doctors]);
     
     }
+
+    //show the add doctor form
+
+    public function create(){
+    
+        return view('admin.doctor.adddoctor');
+
+    }
+
+    //store a row into the database
+
+    public function store(Request $request){
+        
+        DB::table('doctors')->insert(
+            [ 
+                'doc_name' => $request->name,
+                'doc_spec' => $request->spec
+            ]
+        );
+
+        return redirect()->route('admin.doctors');
+    }
+
+    //Edit 
+    public function edit($id){
+        $doctor = DB::table('doctors')->where('doc_id', $id)->first();
+        return view('admin.doctor.edit', ['doctor' => $doctor]);
+    }
+
+    //delete
+    public function destroy($id){
+
+        DB::table('doctors')->where('doc_id', $id)->delete();
+        
+    }
+
+    public function update($id, Request $request){
+        DB::table('doctors')
+            ->where('doc_id', $id)
+            ->update(
+                [
+                    'doc_name' => $request->name,
+                    'doc_spec' => $request->spec
+                ]
+        );
+
+        return redirect()->route('admin.doctors');
+    }
+
+
+
+
 
     
 }

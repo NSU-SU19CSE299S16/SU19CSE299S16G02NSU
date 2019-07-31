@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -11,6 +11,9 @@
             </div>
             <div class="col">
             <input type="text" name="stock" class="form-control" placeholder="Stock">
+            </div>
+            <div class="col">
+            <input type="text" name="price" class="form-control" placeholder="Price">
             </div>
         </div>
         <button type="submit" class="btn btn-primary my-3">Add</button>

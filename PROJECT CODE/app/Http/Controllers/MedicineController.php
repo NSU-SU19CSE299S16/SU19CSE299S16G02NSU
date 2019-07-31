@@ -20,7 +20,7 @@ class MedicineController extends Controller
 
     public function create(){
     
-        return view('admin.medicine.addmedicine');
+        return view('admin.medicine.create');
 
     }
 
@@ -29,22 +29,42 @@ class MedicineController extends Controller
     public function store(Request $request){
 
         DB::table('medicines')->insert(
-            [
+            [ 
                 'med_name' => $request->name,
-                'med_stock' => $request->stock
-            
+                'med_stock' => $request->stock,
+                'med_price' => $request->price
             ]
         );
 
-        return redirect()->route('admin.medicine');
+        return redirect()->route('admin.medicines');
 
     }
 
+    public function edit($id){
+        $medicine = DB::table('medicines')->where('med_id', $id)->first();
+        return view('admin.medicine.edit', ['medicine' => $medicine]);
+    }
+
+    public function update($id, Request $request){
+        DB::table('medicines')
+            ->where('med_id', $id)
+            ->update(
+                [
+                    'med_name' => $request->name,
+                    'med_stock' => $request->stock,
+                    'med_price' => $request->price
+                ]
+        );
+
+        return redirect()->route('admin.medicines');
+
+    }
     public function destroy($id){
 
         DB::table('medicines')->where('med_id', $id)->delete();
         
     }
+
 
     //show a specific medicine
     public function show($id){
