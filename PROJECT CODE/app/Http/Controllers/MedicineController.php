@@ -20,7 +20,7 @@ class MedicineController extends Controller
 
     public function create(){
     
-        return view('admin.medicine.addmedicine');
+        return view('admin.medicine.create');
 
     }
 
@@ -31,7 +31,8 @@ class MedicineController extends Controller
         DB::table('medicines')->insert(
             [ 
                 'med_name' => $request->name,
-                'med_stock' => $request->stock
+                'med_stock' => $request->stock,
+                'med_price' => $request->price
             ]
         );
 
@@ -50,7 +51,8 @@ class MedicineController extends Controller
             ->update(
                 [
                     'med_name' => $request->name,
-                    'med_stock' => $request->stock
+                    'med_stock' => $request->stock,
+                    'med_price' => $request->price
                 ]
         );
 

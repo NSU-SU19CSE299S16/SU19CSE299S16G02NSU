@@ -12,6 +12,7 @@
             <th scope="col">#</th>
             <th scope="col">Medicine Name</th>
             <th scope="col">In Stock</th>
+            <th scope="col">Price</th>
             <th scope="col">Added</th>
             <th scope="col">Updated</th>
             <th scope="col"></th>
@@ -24,6 +25,7 @@
                 <th scope="row">{{$medicine->med_id}}</th>
                 <td>{{$medicine->med_name}}</td>
                 <td>{{$medicine->med_stock}}</td>
+                <td>{{$medicine->med_price}}</td>
                 <td>{{$medicine->created_at}}</td>
                 <td>{{$medicine->updated_at}}</td>
                 <td>

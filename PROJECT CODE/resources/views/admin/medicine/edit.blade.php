@@ -13,6 +13,9 @@
             <div class="col">
             <input type="text" name="stock" class="form-control" placeholder="{{$medicine->med_stock}}">
             </div>
+            <div class="col">
+            <input type="text" name="price" class="form-control" placeholder="{{$medicine->med_price}}">
+            </div>
         </div>
         <button type="submit" class="btn btn-primary my-3">UPDATE</button>
     </form>
