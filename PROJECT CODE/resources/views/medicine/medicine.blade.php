@@ -12,14 +12,17 @@
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_stock}}</a>
                 <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_price}} Taka</a>
                 
-                <form class="mt-3">
-                    <button type="submit" class="btn btn-success text-center">Add to cart</button>
+                <form method="POST" action="{{route('cart.store')}}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{$medicine->med_id}}">
+                    <input type="hidden" name="name" value="{{$medicine->med_name}}">
+                    <input type="hidden" name="price" value="{{$medicine->med_price}}">
+                    <button type="submit" class="btn btn-primary my-3">Add To Cart</button>
+
+                    <?php echo Cart::total(); ?>
                 </form>
             </div>
-
-            
         </div>
-
 
     </div>
 </div>

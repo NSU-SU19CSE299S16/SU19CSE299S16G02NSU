@@ -49,6 +49,9 @@
                     
                         <!-- this will be removed later, added to get easy access to the admin area -->
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cart.index') }}">Cart</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/admin">Admin</a>
                         </li>
 
