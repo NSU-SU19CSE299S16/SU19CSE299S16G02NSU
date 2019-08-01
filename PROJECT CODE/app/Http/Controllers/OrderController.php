@@ -10,15 +10,25 @@ class OrderController extends Controller
 {
     public function store(Request $request){
 
-        $products = Cart::content();
-        DB::table('orders')->insert(
+
+        $data = DB::table('orders')->insert(
             [ 
                 'user_id' => \Auth::id(),
-                'order_details' => $products,
                 'pay_method' => $request->pay_method,
                 'total' => Cart::total()
             ]
         );
+
+        $id = DB::getPdo()->lastInsertId();;
+
+        foreach(Cart::content() as $item){
+            DB::table('order_medicines')->insert(
+                [
+                    'order_id' => $id,
+                    'med_id' => $item->id,
+                    'quantity' => $item->qty
+                ]);
+        };
 
         return view('order.waiting');
 

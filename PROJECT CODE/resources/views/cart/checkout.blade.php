@@ -25,10 +25,6 @@
         <button type="submit" class="btn btn-warning">Place Order</button>
     </form>
 
-<?php foreach (Cart::content() as $item) {
-
-echo($item->qty);
-        }?>
 
 
 </div>

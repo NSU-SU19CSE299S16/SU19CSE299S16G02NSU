@@ -17,7 +17,6 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('order_id');
             $table->integer('user_id');
             $table->string('pay_method');
-            $table->json('order_details');
             $table->string('total');
             $table->timestamps();
         });
