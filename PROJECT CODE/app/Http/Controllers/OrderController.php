@@ -26,6 +26,12 @@ class OrderController extends Controller
         Cart::destroy();
 
     }
+    public function index(){
+        $orders = DB::table('orders')->get();
+
+        return view('Orders.index', ['orders' => $orders]);
+    }
+
 
 
 }
