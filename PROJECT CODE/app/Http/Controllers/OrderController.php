@@ -13,7 +13,7 @@ class OrderController extends Controller
         $products = Cart::content();
         DB::table('orders')->insert(
             [ 
-                'user_id' => \Auth::user()->user_id,
+                'user_id' => \Auth::id(),
                 'order_details' => $products->toJson(),
                 'total' => Cart::total()
             ]
