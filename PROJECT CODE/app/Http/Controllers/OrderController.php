@@ -15,6 +15,7 @@ class OrderController extends Controller
             [ 
                 'user_id' => \Auth::id(),
                 'order_details' => $products->toJson(),
+                'pay_method' => $request->pay_method,
                 'total' => Cart::total()
             ]
         );
