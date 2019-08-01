@@ -19,8 +19,11 @@ class OrderController extends Controller
                 'total' => Cart::total()
             ]
         );
+        Cart::destroy();
 
-        return redirect()->route('cart.index');
+        return redirect()->view('order.waiting');
 
     }
+
+
 }

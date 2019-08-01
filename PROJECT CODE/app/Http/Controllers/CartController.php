@@ -39,6 +39,8 @@ class CartController extends Controller
 
 
         Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => 1, 'price' => $request->price, 'weight' => 1]);
+        return redirect()->route('cart.index');
+
     }
 
     /**

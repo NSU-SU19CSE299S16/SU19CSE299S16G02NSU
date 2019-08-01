@@ -6,7 +6,7 @@
     @csrf
     <div class="form-check">
         <input class="form-check-input" type="radio" name="pay_method" id="bkash" value="bkash" checked>
-        <label class="form-check-label" for="exampleRadios1">
+        <label class="form-check-label" for="bkash">
             bKash
         </label>
         </div>
