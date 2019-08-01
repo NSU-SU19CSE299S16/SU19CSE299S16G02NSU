@@ -30,10 +30,12 @@ class OrderController extends Controller
                 ]);
         };
 
+        Cart::destroy();
+
+
         return view('order.waiting');
 
         
-        Cart::destroy();
 
     }
     public function index(){
