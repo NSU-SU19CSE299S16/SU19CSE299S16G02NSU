@@ -29,7 +29,7 @@ class OrderController extends Controller
     public function index(){
         $orders = DB::table('orders')->get('order_details');
         foreach ($orders as $item) {
-                echo($item->name);
+                dd($item);
         }
 
         //return view('order.index', ['orders' => $orders]);

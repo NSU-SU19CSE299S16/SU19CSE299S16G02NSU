@@ -25,8 +25,10 @@
         <button type="submit" class="btn btn-warning">Place Order</button>
     </form>
 
-    {{$name = Cart::content()->first}}
-    {{$name->qty}}
+<?php foreach (Cart::content() as $item) {
+
+echo($item->qty);
+        }?>
 
 
 </div>
