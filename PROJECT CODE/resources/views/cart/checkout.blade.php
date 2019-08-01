@@ -25,7 +25,10 @@
         <button type="submit" class="btn btn-warning">Place Order</button>
     </form>
 
-    {{Cart::content()}}
+    {{$name = Cart::content()->first}}
+    {{$name->qty}}
+
+
 </div>
 
 @endsection

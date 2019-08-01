@@ -14,7 +14,7 @@ class OrderController extends Controller
         DB::table('orders')->insert(
             [ 
                 'user_id' => \Auth::id(),
-                'order_details' => $products->toJson(),
+                'order_details' => $products,
                 'pay_method' => $request->pay_method,
                 'total' => Cart::total()
             ]
@@ -27,9 +27,12 @@ class OrderController extends Controller
 
     }
     public function index(){
-        $orders = DB::table('orders')->where('user_id', \Auth::id())->get();
+        $orders = DB::table('orders')->get('order_details');
+        foreach ($orders as $item) {
+                echo($item->name);
+        }
 
-        return view('Orders.index', ['orders' => $orders]);
+        //return view('order.index', ['orders' => $orders]);
     }
 
 
