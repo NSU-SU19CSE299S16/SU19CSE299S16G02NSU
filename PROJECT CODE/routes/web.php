@@ -39,6 +39,9 @@ Route::get('/cart','CartController@index')->name('cart.index');
 
 Route::get('/agentsimulator','Agent@index')->name('agentsimulator.index');
 
+Route::post('/agentsimulator','Agent@paid')->name('agentsimulator.paid');
+
+
 
 Route::get('/checkingpayment','OrderController@check_pay')->name('order.check_pay');
 

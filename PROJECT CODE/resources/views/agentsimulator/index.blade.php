@@ -28,9 +28,9 @@
 <h1 class="agent-head mb-5">Agent Simulator!</h1>
 <h2 class="mb-3">How much money do you want to send?</h2>
 
-<form>
+<form action="{{route('agentsimulator.paid')}}" method="POST">
   <div class="form-group">
-    <input type="email" class="form-control" id="amount" aria-describedby="amount" placeholder="Enter Amount">
+    <input type="text" class="form-control" name="amount" id="amount" aria-describedby="amount" placeholder="Enter Amount">
     <small id="amount" class="form-text text-muted">Please Enter The Amount</small>
   </div>
   <div class="d-flex justify-content-center">

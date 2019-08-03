@@ -10,4 +10,9 @@ class Agent extends Controller
     {
         return view('agentsimulator.index');
     }
+
+    public function paid(Request $request)
+    {
+        $amount = $request->amount;
+    }
 }
