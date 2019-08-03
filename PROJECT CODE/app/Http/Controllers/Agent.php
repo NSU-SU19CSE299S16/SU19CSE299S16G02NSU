@@ -19,14 +19,17 @@ class Agent extends Controller
         DB::table('bkash_agent')->insert(
             [ 
                 'amount' => $amount,
-                'transaction_id' => $transaction_id
+                'transaction_id' => $transaction_id,
+                'created_at' => date('Y-m-d H:i:s')
             ]
         );
 
         DB::table('payments_received')->insert(
             [ 
                 'amount' => $amount,
-                'transaction_id' => $transaction_id
+                'transaction_id' => $transaction_id,
+                'created_at' => date('Y-m-d H:i:s')
+
             ]
         );
 
