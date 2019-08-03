@@ -11156,9 +11156,47 @@ div {
 .agent h1 {
   font-family: "Bungee Inline", cursive;
   font-size: 3rem;
+  -webkit-animation: color 5s cubic-bezier(1, 0, 0, 1) infinite;
+  animation: color 5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
 .agent .form-control {
   width: 50vh !important;
+}
+
+@-webkit-keyframes color {
+  0% {
+    color: #D62828;
+  }
+
+  33% {
+    color: #F77F00;
+  }
+
+  67% {
+    color: #FCBF49;
+  }
+
+  100% {
+    color: #EAE2B7;
+  }
+}
+
+@keyframes color {
+  0% {
+    color: #D62828;
+  }
+
+  33% {
+    color: #F77F00;
+  }
+
+  67% {
+    color: #FCBF49;
+  }
+
+  100% {
+    color: #EAE2B7;
+  }
 }
 
