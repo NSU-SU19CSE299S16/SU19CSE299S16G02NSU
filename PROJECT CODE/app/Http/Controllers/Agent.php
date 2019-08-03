@@ -16,13 +16,6 @@ class Agent extends Controller
     {
         $amount = $request->amount;
         $transaction_id = Str::random(16);
-        DB::table('bkash_agent')->insert(
-            [ 
-                'amount' => $amount,
-                'transaction_id' => $transaction_id,
-                'created_at' => date('Y-m-d H:i:s')
-            ]
-        );
 
         DB::table('payments_received')->insert(
             [ 
