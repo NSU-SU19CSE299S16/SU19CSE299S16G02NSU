@@ -47,6 +47,19 @@ class OrderController extends Controller
         //return view('order.index', ['orders' => $orders]);
     }
 
+    public function check_pay(Request $request, $total){
+        $transaction_id = $request->transaction_id;
+        //strcmp is php built-in function which compares two strings
+        $payments_received = DB::table('payments_received')->get();
+        foreach ($payments_received as $pr){
+            if(strcmp($pr->transaction_id, $transaction_id) == 0){
+                $t_id = $pr->transaction_id;
+                break;
+            }
+
+        }
+    }
+
 
 
 }

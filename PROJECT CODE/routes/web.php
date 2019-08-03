@@ -43,7 +43,7 @@ Route::post('/agentsimulator','Agent@paid')->name('agentsimulator.paid');
 
 
 
-Route::get('/checkingpayment','OrderController@check_pay')->name('order.check_pay');
+Route::post('/checkingpayment','OrderController@check_pay')->name('order.check_pay');
 
 
 Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medicines');
