@@ -14,11 +14,10 @@ class OrderMedicines extends Migration
     public function up()
     {
         Schema::create('order_medicines', function (Blueprint $table) {
-
-        $table->integer('order_id');
-        $table->integer('med_id');
-        $table->integer('quantity');
-    });
+            $table->integer('order_id');
+            $table->integer('med_id');
+            $table->integer('quantity');
+        });
     }
 
     /**
@@ -28,6 +27,6 @@ class OrderMedicines extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('order_medicines');
     }
 }

@@ -20,6 +20,7 @@ class PaymentsReceived extends Migration
             $table->timestamps();
         });
 
+    }
     /**
      * Reverse the migrations.
      *
@@ -27,6 +28,6 @@ class PaymentsReceived extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('payments_received');
     }
 }

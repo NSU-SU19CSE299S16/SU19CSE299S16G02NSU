@@ -26,5 +26,7 @@ class Agent extends Controller
             ]
         );
 
+        return view('agentsimulator.success', ['amount' => $amount, 'transaction_id' => $transaction_id]);
     }
+
 }
