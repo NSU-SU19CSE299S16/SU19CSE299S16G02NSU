@@ -7,6 +7,9 @@
     @csrf
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Bkash Transaction ID" aria-label="Confirm" name="transaction_id" aria-describedby="basic-addon2">
+            <!-- <input type="hidden" name="total" value="{{$total}}"> -->
+            <input type="hidden" name="order_id"  value="{{$order_id}}">
+
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit">Confirm</button>
             </div>

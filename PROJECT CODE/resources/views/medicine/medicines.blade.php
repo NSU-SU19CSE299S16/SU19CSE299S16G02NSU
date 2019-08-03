@@ -2,6 +2,18 @@
 
 @section('content')
 <div class="container">
+
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+
     <h4 class="text-center lead">This is the list of all the medicine that are available in our inventory.</h4>
 
     <div class="list-group mt-5">

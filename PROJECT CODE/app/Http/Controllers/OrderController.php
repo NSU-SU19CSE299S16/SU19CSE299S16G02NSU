@@ -30,10 +30,17 @@ class OrderController extends Controller
                 ]);
         };
 
+        $total = Cart::total();
+        $order_id = $id;
+
         Cart::destroy();
 
 
-        return view('order.waiting');
+        return view('order.waiting',
+        [
+            'order_id' => $order_id, 
+            'total' => $total
+        ]);
 
         
 
@@ -60,10 +67,20 @@ class OrderController extends Controller
         }
         if($match == false){
             return redirect()->route('order.waiting')->with('error', 'Transaction ID does not match. Please try again.');
-
         }
         else{
-            return redirect()->route('order.waiting')->with('success', 'Payment received!');
+            return redirect()->route('medicine.index')->with('success', 'Payment received!');
+            DB::table('payments_completed')->insert(
+                [
+                    'order_id' => $request->order_id,
+                    'amount' => $request->total,
+                    'bkash_t_id' => $transaction_id,
+                    'created_at' => date('Y-m-d H:i:s')
+
+                ]);
+
+                DB::table('users')->where('votes', '<', 100)->delete();
+
 
         }
     }
