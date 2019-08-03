@@ -51,14 +51,20 @@ class OrderController extends Controller
         $transaction_id = $request->transaction_id;
         //strcmp is php built-in function which compares two strings
         $payments_received = DB::table('payments_received')->get();
+        $match = false;
         foreach ($payments_received as $pr){
             if(strcmp($pr->transaction_id, $transaction_id) == 0){
-                $t_id = $pr->transaction_id;
-                return redirect()->route('order.waiting')->with('success', 'Payment received!');
-                echo('done!');
+                $match = true;
                 break;
-            }
-            
+            }   
+        }
+        if($match == false){
+            return redirect()->route('order.waiting')->with('error', 'Transaction ID does not match. Please try again.');
+
+        }
+        else{
+            return redirect()->route('order.waiting')->with('success', 'Payment received!');
+
         }
     }
 
