@@ -54,7 +54,11 @@ class OrderController extends Controller
         foreach ($payments_received as $pr){
             if(strcmp($pr->transaction_id, $transaction_id) == 0){
                 $t_id = $pr->transaction_id;
+                return view('orders.waiting')->with('success', 'Payment received!');
                 break;
+            }
+            else{
+                return view('orders.waiting')->with('error', 'Payment not received, try again.');
             }
 
         }
