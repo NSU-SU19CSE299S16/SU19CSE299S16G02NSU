@@ -26,19 +26,11 @@
 
 <div class="agent d-flex flex-column justify-content-center align-items-center">
 <h1 class="agent-head mb-5">Agent Simulator</h1>
-<h2 class="mb-3">How much money do you want to send?</h2>
-
-<form action="{{route('agentsimulator.paid')}}" method="POST">
-  <div class="form-group">
-    <input type="text" class="form-control" name="amount" id="amount" aria-describedby="amount" placeholder="Enter Amount">
-    <small id="amount" class="form-text text-muted">Please Enter The Amount</small>
-  </div>
-  <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-primary">Send Money</button>
-  </div>
+<h2 class="mb-3">Congratulations you have sent <strong>{{$amount}} Taka to HAMDS!</strong></h2>
+<h2 class="mb-3">Your Transaction ID is: {{$transaction_id}}.</h2>
 
 
-</form>
+
 
 </div>
 
