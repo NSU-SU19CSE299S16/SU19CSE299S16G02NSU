@@ -29,6 +29,7 @@
 <h2 class="mb-3">How much money do you want to send?</h2>
 
 <form action="{{route('agentsimulator.paid')}}" method="POST">
+    @csrf
   <div class="form-group">
     <input type="text" class="form-control" name="amount" id="amount" aria-describedby="amount" placeholder="Enter Amount">
     <small id="amount" class="form-text text-muted">Please Enter The Amount</small>

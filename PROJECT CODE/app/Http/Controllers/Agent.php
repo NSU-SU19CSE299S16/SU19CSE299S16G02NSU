@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Str;
 
 class Agent extends Controller
 {
