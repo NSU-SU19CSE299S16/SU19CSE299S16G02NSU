@@ -69,7 +69,6 @@ class OrderController extends Controller
             return redirect()->route('order.waiting')->with('error', 'Transaction ID does not match. Please try again.');
         }
         else{
-            return redirect()->route('medicine.index')->with('success', 'Payment received!');
             DB::table('payments_completed')->insert(
                 [
                     'order_id' => $request->order_id,
@@ -79,9 +78,9 @@ class OrderController extends Controller
 
                 ]);
 
-                DB::table('users')->where('votes', '<', 100)->delete();
+            DB::table('payments_received')->where('transaction_id', $transaction_id)->delete();
 
-
+            return redirect()->route('medicine.index')->with('success', 'Payment received!');
         }
     }
 
