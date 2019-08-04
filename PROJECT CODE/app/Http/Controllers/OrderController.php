@@ -55,9 +55,9 @@ class OrderController extends Controller
             ->where('user_id' , \Auth::id())
             ->get();
         $orders = DB::table('orders')->get();    
-        dd($orders);
+        // dd($orders);
 
-        //return view('order.index', ['orders' => $orders]);
+        return view('order.index', ['orders' => $orders, 'order_medicines' => $order_medicines]);
     }
 
     public function check_pay(Request $request){
