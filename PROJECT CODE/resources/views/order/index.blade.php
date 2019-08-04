@@ -9,11 +9,12 @@
 @foreach($orders as $order)
 
 
-    <ul class="list-group-item list-group">{{$products = json_decode($order->order_details, true)}}</ul>
-    @foreach($products as $product)
-        <li class="list-group-item">{{$product}}</li>
-    @endforeach
+    <ul class="list-group-item list-group"></ul>
+        <li class="list-group-item"></li>
 
+
+    <li class="list-group-item">{{$order->total}}</li>
+    <li class="list-group-item">{{$order->total}}</li>
 
     <li class="list-group-item">{{$order->total}}</li>
 @endforeach
