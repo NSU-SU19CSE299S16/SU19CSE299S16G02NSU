@@ -19,9 +19,17 @@
     <div class="list-group mt-5">
 
         <div class="row justify-content-center">
-            <div class="col-md-2 text-center">
+            <div class="col-md-4 text-center">
                 @foreach($medicines as $medicine)
-                    <a href="{{route('medicine.show', ['id' => $medicine->med_id])}}" class="list-group-item list-group-item-action list-group-item-info">{{$medicine->med_name}}</a>
+
+
+                    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card-header"><a href="{{route('medicine.show', ['id' => $medicine->med_id])}}" style="color: white;"><h5>{{$medicine->med_name}}</h5></a></div>
+                        <div class="card-body">
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quam!</p>
+                        </div>
+                    </div>
+
                 @endforeach
             </div>
         </div>
