@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class OrderMedicines extends Migration
+class PaymentsCompleted extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class OrderMedicines extends Migration
      */
     public function up()
     {
-        Schema::create('order_medicines', function (Blueprint $table) {
+        Schema::create('payments_completed', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->integer('order_id');
-            $table->integer('med_id');
-            $table->integer('quantity');
+            $table->decimal('amount', 8, 2);	            
+            $table->string('bkash_t_id')->unique();
+            $table->timestamps();
         });
-    }
 
+    }
     /**
      * Reverse the migrations.
      *
@@ -27,6 +29,7 @@ class OrderMedicines extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_medicines');
+        Schema::dropIfExists('payments_completed');
     }
+
 }

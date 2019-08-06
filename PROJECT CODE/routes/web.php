@@ -37,8 +37,17 @@ Route::get('/checkout','CartController@checkout')->name('cart.checkout');
 
 Route::get('/cart','CartController@index')->name('cart.index');
 
+Route::get('/agentsimulator','Agent@index')->name('agentsimulator.index');
 
-Route::get('/checkingpayment','OrderController@check_pay')->name('order.check_pay');
+Route::post('/agentsimulator','Agent@paid')->name('agentsimulator.paid');
+
+
+
+Route::post('/order/checkingpayment','OrderController@check_pay')->name('order.check_pay');
+
+
+Route::view('/order/waiting', 'order.waiting')->name('order.waiting');
+
 
 
 Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medicines');

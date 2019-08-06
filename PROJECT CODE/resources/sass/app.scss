@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
 // Variables
 @import 'variables';
 
@@ -54,3 +55,49 @@ div {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.agent{
+    height: 50vh;
+    width: 100vh;
+    h1{
+        font-family: 'Bungee Inline', cursive;
+        font-size: 3rem;
+        -webkit-animation: color 5s cubic-bezier(1,0,0,1) infinite;
+        animation: color 5s cubic-bezier(1,0,0,1) infinite; 
+    }
+    button{
+        color: #494949 !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 1rem;
+        border: 4px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    button:hover {
+        color: #ffffff !important;
+        background: #F77F00;
+        border-color: #F77F00 !important;
+        transition: all 0.4s ease 0s;
+    }
+    .form-control{
+        width: 50vh !important;
+    }
+
+}
+
+  
+@-webkit-keyframes color {
+    0% { color: #D62828; }
+    33% { color: #F77F00; }  
+    67% { color: #FCBF49; }
+    100% { color: #EAE2B7; }
+  }
+  
+  @keyframes color {
+    0% { color: #D62828; }
+    33% { color: #F77F00; }  
+    67% { color: #FCBF49; }
+    100% { color: #EAE2B7; }
+  }
