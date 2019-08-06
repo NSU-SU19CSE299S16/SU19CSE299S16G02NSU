@@ -64,7 +64,12 @@ class CartController extends Controller
      
     public function checkout(){
 
+        if(Cart::total() == 0){
+            return redirect()->route('medicine.index')->with('error', 'Error: Please add a medcine to cart and then checkout.');
+        }
+        else{
         return view('cart.checkout');
+        }
 
     }
     public function edit($id)

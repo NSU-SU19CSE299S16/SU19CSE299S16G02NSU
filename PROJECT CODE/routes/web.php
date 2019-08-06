@@ -29,6 +29,14 @@ Route::resource('appointment', 'AppointmentController');
 Route::resource('doctor', 'DoctorController');
 
 
+Route::get('/order/waiting/{order_id}/{total}', function ($order_id,$total) {
+
+    return view('order.waiting',['order_id'=>$order_id,'total'=>$total]);
+
+})->name('order.pending');
+
+
+
 Route::resource('Order', 'OrderController');
 
 Route::resource('cart', 'CartController');
@@ -43,10 +51,8 @@ Route::post('/agentsimulator','Agent@paid')->name('agentsimulator.paid');
 
 
 
-Route::post('/order/checkingpayment','OrderController@check_pay')->name('order.check_pay');
+Route::post('/order/waiting','OrderController@check_pay')->name('order.check_pay');
 
-
-Route::get('/order/waiting', 'OrderController@store')->name('order.waiting');
 
 
 
