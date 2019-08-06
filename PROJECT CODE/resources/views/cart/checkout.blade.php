@@ -2,18 +2,24 @@
 
 @section('content')
 <div class="container">
+    <h4>Please Select Payment Method</h4>
+    <br>
+    <br>
     <form action="{{route('Order.store')}}" method="POST">
     @csrf
-
+    <div class="d-flex flex-row justify-content-center">
         <label class="pay_method">
             <input type="radio" name="pay_method" value="bkash" >
             <img src="{{asset('assets/bkash-logo.jpg')}}">        
         </label>
-        <label class="pay_method">
+        <label class="pay_method mx-3">
             <input type="radio" name="pay_method" value="ucash" >
             <img src="{{asset('assets/ucash-logo.png')}}">        
         </label>
-        <button type="submit" class="crt-btn">Place Order</button>
+    </div>
+        <div class="text-center mt-5">
+            <button type="submit" class="crt-btn">Place Order</button>
+        </div>
     </form>
 
 

@@ -54,7 +54,7 @@
                     
                         <!-- this will be removed later, added to get easy access to the admin area -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cart.index') }}">Cart</a>
+                            <a class="nav-link" href="{{ route('cart.index') }}" style="font-size: 1rem;"><i class="fas fa-shopping-cart"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/admin">Admin</a>
