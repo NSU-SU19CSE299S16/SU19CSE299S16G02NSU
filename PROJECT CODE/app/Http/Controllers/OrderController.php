@@ -11,40 +11,38 @@ class OrderController extends Controller
     public function store(Request $request){
 
 
-        $data = DB::table('orders')->insert(
-            [ 
-                'user_id' => \Auth::id(),
-                'pay_method' => $request->pay_method,
-                'total' => Cart::total()
-            ]
-        );
-
-        $id = DB::getPdo()->lastInsertId();;
-
-        foreach(Cart::content() as $item){
-            DB::table('order_medicines')->insert(
-                [
-                    'order_id' => $id,
-                    'med_id' => $item->id,
-                    'quantity' => $item->qty
-                ]);
-        };
-
-        $total = Cart::total();
-        $order_id = $id;
-
-        Cart::destroy();
-
-
-        return redirect()->route('order.waiting',
-        [
-            'order_id' => $order_id, 
-            'total' => $total
-        ]);
-
-        
-
+            $data = DB::table('orders')->insert(
+                [ 
+                    'user_id' => \Auth::id(),
+                    'pay_method' =>  $request->pay_method,
+                    'total' => Cart::total()
+                ]
+            );
+    
+            $id = DB::getPdo()->lastInsertId();;
+    
+            foreach(Cart::content() as $item){
+                DB::table('order_medicines')->insert(
+                    [
+                        'order_id' => $id,
+                        'med_id' => $item->id,
+                        'quantity' => $item->qty
+                    ]);
+            };
+    
+            $total = Cart::total();
+            $order_id = $id;
+    
+            Cart::destroy();
+    
+    
+            return redirect()->route('order.pending',
+            [
+                'order_id' => $order_id, 
+                'total' => $total
+            ]);
     }
+
 
 
     public function index(){
@@ -72,7 +70,11 @@ class OrderController extends Controller
             }   
         }
         if($match == false){
-            return redirect()->route('order.waiting')->with('error', 'Transaction ID does not match. Please try again.');
+            return redirect()->route('order.pending',
+            [
+                'order_id' => $request->order_id, 
+                'total' => $request->total
+            ])->with('error', 'Transaction ID does not match. Please try again.');
         }
         else{
             DB::table('payments_completed')->insert(
@@ -83,6 +85,10 @@ class OrderController extends Controller
                     'created_at' => date('Y-m-d H:i:s')
 
                 ]);
+            
+            DB::table('orders')
+                ->where('order_id', $request->order_id)
+                ->update(['order_status' => 'completed']);
 
             DB::table('payments_received')->where('transaction_id', $transaction_id)->delete();
 
