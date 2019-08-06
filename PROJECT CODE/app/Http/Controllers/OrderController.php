@@ -36,7 +36,7 @@ class OrderController extends Controller
         Cart::destroy();
 
 
-        return view('order.waiting',
+        return redirect()->route('order.waiting',
         [
             'order_id' => $order_id, 
             'total' => $total
