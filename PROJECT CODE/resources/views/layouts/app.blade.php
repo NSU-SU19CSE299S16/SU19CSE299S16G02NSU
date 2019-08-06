@@ -9,6 +9,8 @@
 
     <title>{{ config('app.name', 'HAMDS') }}</title>
 
+    <script src="https://kit.fontawesome.com/813659588a.js"></script>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
