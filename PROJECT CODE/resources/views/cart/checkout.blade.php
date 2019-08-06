@@ -22,7 +22,7 @@
             Ucash
         </label>
     </div>
-        <button type="submit" class="btn btn-warning">Place Order</button>
+        <button type="submit" class="crt-btn">Place Order</button>
     </form>
 
 

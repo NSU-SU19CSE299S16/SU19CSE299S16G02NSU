@@ -86,7 +86,7 @@ div {
     }
 
 }
-
+//button in show medicines page
 .med-btn{
         color: #494949 !important;
         text-transform: uppercase;
@@ -107,6 +107,29 @@ div {
     border-color: #F77F00 !important;
     transition: all 0.4s ease 0s;
 }
+
+//buttons in cart page
+.crt-btn{
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 0.7rem;
+    border: 4px solid #00171F !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    i{
+        font-size: 1.2rem;
+    }
+}
+
+.crt-btn:hover {
+color: #ffffff !important;
+background: #003459;
+border-color: #00171F !important;
+transition: all 0.4s ease 0s;
+}
+
 
   
 @-webkit-keyframes color {

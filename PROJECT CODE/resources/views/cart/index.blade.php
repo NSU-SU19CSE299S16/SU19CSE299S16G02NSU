@@ -52,12 +52,20 @@
 					</tr>
 				</tfoot>
 			</table>
+
+
+
+			<div class="d-flex flex-row justify-content-center my-4">	
+				<form action="{{route('cart.checkout')}}" class="align-self-start mx-2" method="GET">
+					<button type="submit" class="crt-btn">Proceed To Checkout</button>
+				</form>
+				<form action="#" class="align-self-end mx-2" method="GET">
+					<button type="submit" class="crt-btn">Continue Shopping</button>
+				</form>
+
+			</div>
 		</div>
 	</div>
-	<form action="{{route('cart.checkout')}}" method="GET">
-        <button type="submit" class="btn btn-warning">Proceed To Checkout</button>
-    </form>
-	<button class="btn btn-lg btn-warning">Continue Shopping</button>
 </div>
 
 @endsection
