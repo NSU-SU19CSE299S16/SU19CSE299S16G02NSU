@@ -46,7 +46,7 @@ Route::post('/agentsimulator','Agent@paid')->name('agentsimulator.paid');
 Route::post('/order/checkingpayment','OrderController@check_pay')->name('order.check_pay');
 
 
-Route::view('/order/waiting', 'order.waiting')->name('order.waiting');
+Route::get('/order/waiting', 'OrderController@store')->name('order.waiting');
 
 
 

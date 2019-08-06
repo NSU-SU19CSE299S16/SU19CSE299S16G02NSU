@@ -36,7 +36,7 @@ class OrderController extends Controller
         Cart::destroy();
 
 
-        return view('order.waiting',
+        return redirect()->route('order.waiting',
         [
             'order_id' => $order_id, 
             'total' => $total
@@ -45,13 +45,19 @@ class OrderController extends Controller
         
 
     }
-    public function index(){
-        $orders = DB::table('orders')->get('order_details');
-        foreach ($orders as $item) {
-                dd($item);
-        }
 
-        //return view('order.index', ['orders' => $orders]);
+
+    public function index(){
+        $order_medicines = DB::table('orders')
+            ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
+            ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
+            ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'orders.user_id', 'orders.total', 'orders.order_id')
+            ->where('user_id' , \Auth::id())
+            ->get();
+        $orders = DB::table('orders')->get();    
+        // dd($orders);
+
+        return view('order.index', ['orders' => $orders, 'order_medicines' => $order_medicines]);
     }
 
     public function check_pay(Request $request){

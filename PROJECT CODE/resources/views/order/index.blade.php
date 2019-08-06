@@ -4,20 +4,31 @@
 
 <div class="container">
 
-
-<ul class="list-group">
 @foreach($orders as $order)
 
+<ul class="list-group my-3">
 
-    <ul class="list-group-item list-group">{{$products = json_decode($order->order_details, true)}}</ul>
-    @foreach($products as $product)
-        <li class="list-group-item">{{$product}}</li>
+
+    <ul class=" list-group">
+    @foreach($order_medicines as $om)
+
+    @if ($order->order_id == $om->order_id)
+
+
+    <li class="list-group-item">{{$om->med_name}}</li>
+
+    @endif
+
+
     @endforeach
+    </ul>
 
+
+    <li class="list-group-item">{{$order->order_status}}</li>
 
     <li class="list-group-item">{{$order->total}}</li>
-@endforeach
 </ul>
+@endforeach
 
 
 </div>
