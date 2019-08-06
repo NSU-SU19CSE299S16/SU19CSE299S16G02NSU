@@ -145,3 +145,26 @@ transition: all 0.4s ease 0s;
     67% { color: #FCBF49; }
     100% { color: #EAE2B7; }
   }
+
+  .pay_method{
+    [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      img{
+          width: 12rem;
+      }
+      
+      /* IMAGE STYLES */
+      [type=radio] + img {
+        cursor: pointer;
+      }
+      
+      /* CHECKED STYLES */
+      [type=radio]:checked + img {
+        outline: 4px solid #003459;
+      }
+  }
