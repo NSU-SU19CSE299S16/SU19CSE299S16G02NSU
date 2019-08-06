@@ -25,8 +25,13 @@
 
                     <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
                         <div class="card-header"><a href="{{route('medicine.show', ['id' => $medicine->med_id])}}" style="color: white;"><h5>{{$medicine->med_name}}</h5></a></div>
-                        <div class="card-body">
-                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quam!</p>
+                        <div class="card-body d-flex flex-row-reverse">
+
+                            <div class="icon align-self-center" style="font-size: 2rem">
+                                <i class="fas fa-plus">
+                                </i>
+                            </div>
+                            <p class="lead m-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
                         </div>
                     </div>
 

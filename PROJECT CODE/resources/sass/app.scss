@@ -87,6 +87,25 @@ div {
 
 }
 
+.styled-button{
+    button{
+        color: #494949 !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 1rem;
+        border: 4px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    button:hover {
+        color: #ffffff !important;
+        background: #F77F00;
+        border-color: #F77F00 !important;
+        transition: all 0.4s ease 0s;
+    }
+}
+
   
 @-webkit-keyframes color {
     0% { color: #D62828; }
