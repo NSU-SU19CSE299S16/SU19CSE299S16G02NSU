@@ -11184,19 +11184,23 @@ div {
   width: 50vh !important;
 }
 
-.styled-button button {
+.med-btn {
   color: #494949 !important;
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
-  padding: 1rem;
+  padding: 0.7rem;
   border: 4px solid #494949 !important;
   display: inline-block;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
-.styled-button button:hover {
+.med-btn i {
+  font-size: 1.2rem;
+}
+
+.med-btn:hover {
   color: #ffffff !important;
   background: #F77F00;
   border-color: #F77F00 !important;

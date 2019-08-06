@@ -25,13 +25,19 @@
 
                     <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
                         <div class="card-header"><a href="{{route('medicine.show', ['id' => $medicine->med_id])}}" style="color: white;"><h5>{{$medicine->med_name}}</h5></a></div>
-                        <div class="card-body d-flex flex-row-reverse">
+                        <div class="card-body d-flex flex-column">
 
                             <div class="icon align-self-center" style="font-size: 2rem">
-                                <i class="fas fa-plus">
-                                </i>
+ 
                             </div>
-                            <p class="lead m-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
+                            <form method="POST" action="{{route('cart.store')}}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$medicine->med_id}}">
+                                    <input type="hidden" name="name" value="{{$medicine->med_name}}">
+                                    <input type="hidden" name="price" value="{{$medicine->med_price}}">
+                                    <button type="submit" class="med-btn"><i class="fas fa-plus mr-2"></i>Add to cart</button>
+
+                            </form>
                         </div>
                     </div>
 

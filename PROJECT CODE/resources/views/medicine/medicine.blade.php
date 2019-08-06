@@ -19,7 +19,6 @@
                     <input type="hidden" name="price" value="{{$medicine->med_price}}">
                     <button type="submit" class="btn btn-primary my-3">Add To Cart</button>
 
-                    <?php echo Cart::total(); ?>
                 </form>
             </div>
         </div>
