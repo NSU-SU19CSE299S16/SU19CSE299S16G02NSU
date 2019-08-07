@@ -66,7 +66,8 @@ Route::get('/admin', function() {
     return view('admin.index');
 });
 
-
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
 
 
     
