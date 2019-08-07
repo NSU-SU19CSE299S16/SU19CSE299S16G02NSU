@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use DB;
 
 class ProfileController extends Controller
 {
@@ -66,9 +68,23 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $pro_pic = $request->file('profile_picture');
+        $extension = $pro_pic->getClientOriginalExtension();
+        Storage::disk('public')->put($pro_pic->getFilename().'.'.$extension,  File::get($pro_pic));
+    
+
+        DB::table('users')
+            ->where('id', \Auth::id())
+            ->update([
+                'mime' => $pro_pic->getClientMimeType(),
+                'original_filename' => $pro_pic->getClientOriginalName(),
+                'filename' => $pro_pic->getFilename().'.'.$extension
+                ]);
+
+        return redirect()->route('profile')
+                ->with('success','Profile Picture added successfully...');        
     }
 
     /**
