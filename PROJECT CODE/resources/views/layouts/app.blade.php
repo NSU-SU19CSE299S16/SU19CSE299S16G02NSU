@@ -42,9 +42,6 @@
                             <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('Order.index')}}">Medicines</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Doctors</a>
                         </li>
                     </ul>

@@ -45,7 +45,7 @@ class OrderController extends Controller
 
 
 
-    public function index(){
+    public function pastOrders(){
         $order_medicines = DB::table('orders')
             ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
             ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
@@ -55,7 +55,7 @@ class OrderController extends Controller
         $orders = DB::table('orders')->get();    
         // dd($orders);
 
-        return view('order.index', ['orders' => $orders, 'order_medicines' => $order_medicines]);
+        return view('order.past_orders', ['orders' => $orders, 'order_medicines' => $order_medicines]);
     }
 
     public function check_pay(Request $request){
