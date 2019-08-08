@@ -25,7 +25,8 @@
     </div>
 
     <div class="col profile-details">
-    
+        <h3>User Credentials</h3>
+        <p class="detail">Email : {{$user->email}}</p>
     </div>
 
 </div>

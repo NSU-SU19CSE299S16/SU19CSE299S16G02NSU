@@ -15,7 +15,13 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('auth.profile');
+        $user =   DB::table('users')->where('id', \Auth::id())->first();
+        if($user){
+            return view('auth.profile', ['user' => $user]);
+        }
+        else{
+            return redirect()->route('home')->with('error','Page Does Not Exist!');
+        }
     }
 
     /**
