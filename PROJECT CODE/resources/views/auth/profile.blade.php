@@ -16,13 +16,10 @@
 
 <div class="row profile">
 
-    <div class="col p-0 m-0 profile-picture" style="background: url({{url('assets/bg-1.jpg')}})">
+    <div class="p-0 m-0 profile-picture" style="background: url({{url('assets/bg-1.jpg')}})">
 
-            <div class="overlay">
-            </div>
-
-            <div class="picture">
-                <img src="{{url('assets/profile.jpg')}}" alt="">
+            <div class="picture d-flex justify-content-center">
+                <img src="{{url('assets/profile.jpg')}}" width="30%" alt="" class="align-self-center">
             </div>
 
     </div>
