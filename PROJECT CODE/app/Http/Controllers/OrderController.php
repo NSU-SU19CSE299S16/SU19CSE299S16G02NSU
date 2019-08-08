@@ -52,10 +52,13 @@ class OrderController extends Controller
         ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
         ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
         ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'orders.user_id', 'orders.total', 'orders.order_id')
-        ->where('user_id' , \Auth::id())
-        ->get();
+        ->whereColumn([
+            ['user_id' , \Auth::id()],
+            ['order_id', $order_id]
+        ])->get();
 
-        $or
+        return view('order.details', ['order' => $order, 'order_medicines' => $order_medicines]);
+
    
 
 
