@@ -35,6 +35,7 @@ Route::get('/order/waiting/{order_id}/{total}', function ($order_id,$total) {
 
 })->name('order.pending');
 
+Route::get('/orders/pastorders','OrderController@pastOrders')->name('order.past_orders');
 
 
 Route::resource('Order', 'OrderController');
