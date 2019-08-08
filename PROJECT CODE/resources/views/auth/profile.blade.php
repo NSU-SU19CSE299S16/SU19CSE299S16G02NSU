@@ -16,7 +16,7 @@
 
 <div class="row profile">
 
-    <div class="p-0 m-0 profile-picture" style="background: url({{url('assets/bg-1.jpg')}})">
+    <div class=" m-0 profile-picture" style="background: url({{url('assets/bg-1.jpg')}})">
 
             <div class="picture d-flex justify-content-center">
                 <img src="{{url('assets/profile.jpg')}}" width="30%" alt="" class="align-self-center">
@@ -24,9 +24,14 @@
 
     </div>
 
-    <div class="col profile-details">
+    <div class="profile-details">
         <h3>User Credentials</h3>
-        <p class="detail">Email : {{$user->email}}</p>
+            <div class="details d-flex flex-column justify-content-center">
+                <p class="detail"><strong>Email:</strong> {{$user->email}}</p>
+                <p class="detail"><strong>Password:</strong> ***********</p>
+                <p class="detail"><strong>Phone:</strong> {{$user->phone}}</p>
+                <p class="detail"><strong>Address:</strong> {{$user->address}}</p>
+            </div>
     </div>
 
 </div>
