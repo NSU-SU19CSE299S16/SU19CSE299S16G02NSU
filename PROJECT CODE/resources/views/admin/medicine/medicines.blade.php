@@ -2,12 +2,16 @@
 
 @section('content')
 <div class="container">
-    <h4 class="text-center lead">All Medicines</h4>
 
-    <div class="text-center py-3"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+    <div class="d-flex justify-content-between">
+        <h4 class="admin-heading"><i class="fas fa-pills"></i> Medicines</h4>
 
-    <table class="table table-hover table-info">
-        <thead>
+        <div class="admin-add-btn"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+    </div>
+
+
+    <table class="mt-4 table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
             <tr class="bg-info">
             <th scope="col">#</th>
             <th scope="col">Medicine Name</th>

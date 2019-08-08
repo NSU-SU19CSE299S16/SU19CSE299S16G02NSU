@@ -28,8 +28,9 @@ Route::resource('appointment', 'AppointmentController');
 
 Route::resource('doctor', 'DoctorController');
 
+Route::get('/orders/details/{order_id}', 'OrderController@details')->name('order.details');
 
-Route::get('/order/waiting/{order_id}/{total}', function ($order_id,$total) {
+Route::get('/orders/waiting/{order_id}/{total}', function ($order_id,$total) {
 
     return view('order.waiting',['order_id'=>$order_id,'total'=>$total]);
 

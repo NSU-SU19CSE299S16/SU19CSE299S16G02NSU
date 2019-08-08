@@ -11323,3 +11323,15 @@ div {
           justify-content: center;
 }
 
+.porder {
+  background-color: #fff;
+}
+
+.porder .porders-head {
+  border-bottom: 1.5px solid rgba(159, 177, 188, 0.3);
+}
+
+.porder .porders-ordernum {
+  border-bottom: 1.5px solid rgba(159, 177, 188, 0.2);
+}
+
