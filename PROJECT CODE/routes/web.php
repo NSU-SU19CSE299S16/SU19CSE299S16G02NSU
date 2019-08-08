@@ -28,7 +28,7 @@ Route::resource('appointment', 'AppointmentController');
 
 Route::resource('doctor', 'DoctorController');
 
-Route::get('/orders/details/{order_id}', 'OrderController@details')->name('order.details');
+Route::post('/orders/details', 'OrderController@details')->name('order.details');
 
 Route::get('/orders/waiting/{order_id}/{total}', function ($order_id,$total) {
 
