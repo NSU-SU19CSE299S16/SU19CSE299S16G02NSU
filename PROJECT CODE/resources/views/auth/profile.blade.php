@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
 
-<form class="was-validated" action="{{route('profile.update')}}" enctype="multipart/form-data" method="POST">
+<!-- <form class="was-validated" action="{{route('profile.update')}}" enctype="multipart/form-data" method="POST">
 
 @csrf
     <div class="custom-file">
@@ -13,7 +12,29 @@
     </div>
 
 <button class="btn btn-primary" type="submit">Upload</button>
-</form>
+</form> -->
+
+<div class="row profile">
+
+    <div class="col p-0 m-0 profile-picture" style="background: url({{url('assets/bg-1.jpg')}})">
+
+            <div class="overlay">
+            </div>
+
+            <div class="picture">
+                <img src="{{url('assets/profile.jpg')}}" alt="">
+            </div>
+
+    </div>
+
+    <div class="col profile-details">
+    
+    </div>
+
 </div>
+
+
+
+
 
 @endsection

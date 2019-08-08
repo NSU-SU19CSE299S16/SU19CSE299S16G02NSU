@@ -11292,3 +11292,30 @@ div {
   outline: 4px solid #003459;
 }
 
+.profile {
+  overflow: hidden;
+}
+
+.profile col {
+  width: 50%;
+}
+
+.profile-picture {
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.profile-picture .overlay {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0.4;
+  position: absolute;
+}
+
+.profile-picture .picture {
+  z-index: 1;
+  width: 20px;
+}
+
