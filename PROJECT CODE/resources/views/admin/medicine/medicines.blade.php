@@ -12,7 +12,7 @@
 
     <table class="mt-4 table table-striped table-bordered table-hover">
         <thead class="thead-dark">
-            <tr class="bg-info">
+            <tr class="">
             <th scope="col">#</th>
             <th scope="col">Medicine Name</th>
             <th scope="col">In Stock</th>
