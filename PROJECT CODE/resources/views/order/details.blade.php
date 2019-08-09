@@ -7,10 +7,10 @@
 <h2>Order Number #{{$id}} Details</h2>
 
 
-    <table class="mt-4 table table-striped table-bordered table-hover">
-        <thead class="thead-dark">
-            <tr class="bg-info">
-            <th scope="col">Medicine Name</th>
+    <table class="mt-4 table table-hover">
+        <thead class="">
+            <tr class="">
+            <th scope="col" colspan="5">Medicine Name</th>
             <th scope="col">Unit Price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Total</th>
@@ -22,15 +22,32 @@
         @if($om->order_id == $id)
         <tr>
             <td>{{$om->med_name}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>{{$om->med_price}}</td>
             <td>{{$om->quantity}}</td>
             <td>{{$om->med_price * $om->quantity}}</td>
         </tr>    
-        @endif
+        
 
+        
+        
+        
+        @endif
         @endforeach
+        <tfoot>
+
+        <tr>
+            <td colspan="6">&nbsp;</td>
+            <td>Total :</td>
+            <td>{{$order->total}}</td>
+        </tr>
+        </tfoot>
         </tbody>
     </table>
+
 
 
 

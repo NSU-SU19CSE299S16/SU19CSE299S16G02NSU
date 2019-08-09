@@ -46,7 +46,7 @@ class OrderController extends Controller
 
     public function details(Request $request){
 
-        $order = DB::table('orders')->where('order_id' , $request->id)->get();
+        $order = DB::table('orders')->where('order_id' , $request->id)->first();
 
         $order_medicines = DB::table('orders')
             ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
