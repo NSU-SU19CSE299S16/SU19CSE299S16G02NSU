@@ -64,9 +64,7 @@ Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medi
 Route::get('/admin/doctors','DoctorController@adminIndex')->name('admin.doctors');
 
 
-Route::get('/admin', function() {
-    return view('admin.index');
-});
+Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@update')->name('profile.update');
