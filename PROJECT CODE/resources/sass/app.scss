@@ -197,3 +197,16 @@ transition: all 0.4s ease 0s;
     align-content: center;
     justify-content: center;
 }
+
+.porder{
+
+    background-color: #fff;
+
+    .porders-head{
+        border-bottom: 1.5px solid rgba(#9FB1BC, 0.3);
+    }
+    
+    .porders-ordernum{
+        border-bottom: 1.5px solid rgba(#9FB1BC, 0.2);
+    }
+}

@@ -15,7 +15,8 @@ class OrderController extends Controller
                 [ 
                     'user_id' => \Auth::id(),
                     'pay_method' =>  $request->pay_method,
-                    'total' => Cart::total()
+                    'total' => Cart::total(),
+                    'created_at' => date('Y-m-d H:i:s')
                 ]
             );
     
@@ -43,19 +44,34 @@ class OrderController extends Controller
             ]);
     }
 
+    public function details(Request $request){
 
+        $order = DB::table('orders')->where('order_id' , $request->id)->first();
 
-    public function index(){
         $order_medicines = DB::table('orders')
             ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
             ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
-            ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'orders.user_id', 'orders.total', 'orders.order_id')
+            ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'order_medicines.quantity','orders.user_id', 'orders.total', 'orders.order_id')
             ->where('user_id' , \Auth::id())
             ->get();
-        $orders = DB::table('orders')->get();    
+        return view('order.details', ['order' => $order, 'order_medicines' => $order_medicines, 'id' => $request->id]);
+
+    }
+
+    public function show(){
+    }
+
+
+
+
+    public function pastOrders(){
+
+        $orders = DB::table('orders')
+        ->where('user_id', \Auth::id())
+        ->get();    
         // dd($orders);
 
-        return view('order.index', ['orders' => $orders, 'order_medicines' => $order_medicines]);
+        return view('order.past_orders', ['orders' => $orders]);
     }
 
     public function check_pay(Request $request){

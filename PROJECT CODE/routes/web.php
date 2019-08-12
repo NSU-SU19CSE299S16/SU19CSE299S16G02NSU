@@ -28,16 +28,18 @@ Route::resource('appointment', 'AppointmentController');
 
 Route::resource('doctor', 'DoctorController');
 
+Route::post('/orders/details', 'OrderController@details')->name('order.details');
 
-Route::get('/order/waiting/{order_id}/{total}', function ($order_id,$total) {
+Route::get('/orders/waiting/{order_id}/{total}', function ($order_id,$total) {
 
     return view('order.waiting',['order_id'=>$order_id,'total'=>$total]);
 
 })->name('order.pending');
 
+Route::get('/orders/pastorders','OrderController@pastOrders')->name('order.past_orders');
 
 
-Route::resource('Order', 'OrderController');
+Route::resource('orders', 'OrderController');
 
 Route::resource('cart', 'CartController');
 
@@ -62,9 +64,7 @@ Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medi
 Route::get('/admin/doctors','DoctorController@adminIndex')->name('admin.doctors');
 
 
-Route::get('/admin', function() {
-    return view('admin.index');
-});
+Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('/profile/update', 'ProfileController@update')->name('profile.update');

@@ -5,7 +5,7 @@
     <h4>Please Select Payment Method</h4>
     <br>
     <br>
-    <form action="{{route('Order.store')}}" method="POST">
+    <form action="{{route('orders.store')}}" method="POST">
     @csrf
     <div class="d-flex flex-row justify-content-center">
         <label class="pay_method">

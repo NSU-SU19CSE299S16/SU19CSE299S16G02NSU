@@ -42,9 +42,6 @@
                             <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('Order.index')}}">Medicines</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Doctors</a>
                         </li>
                     </ul>
@@ -76,12 +73,18 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                              
+                                    <a class="dropdown-item" href="{{ route('order.past_orders') }}">
+                                       View Past Orders
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        Account Settings
+                                    </a>      
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                    </a>      
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
