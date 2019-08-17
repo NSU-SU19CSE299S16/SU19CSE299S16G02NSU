@@ -4,7 +4,8 @@
 <div class="container">
     <h4 class="text-center lead">Add a new Doctor</h4>
     <form method="POST" action="{{route('doctor.store')}}">
-    @csrf        <div class="form-group">
+    @csrf        
+        <div class="form-group">
             <label for="name">Doctor Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Doctor Name">
         </div>
