@@ -14,7 +14,7 @@
 
     <table class="mt-4 table table-striped table-hover">
 
-    <thead class="thead-dark">
+        <thead class="thead-dark">
             <tr>
             <th scope="col">#</th>
             <th scope="col">Doctor Name</th>
