@@ -21,6 +21,9 @@
             <th scope="col">Speciality</th>
             <th scope="col">Hospital</th>
             <th scope="col">Contact</th>
+            <th scope="col">Added On</th>
+            <th scope="col">Updated On</th>
+            <th scope="col" colspan="2">Actions</th>
             </tr>
         </thead>
         <tbody>
