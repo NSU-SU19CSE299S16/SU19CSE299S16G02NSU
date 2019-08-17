@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="contaniner">
+<div class="container">
 
 
     <div class="d-flex justify-content-between">
@@ -12,18 +12,21 @@
 
 
 
-    <table class="table table-hover table-info">
+    <table class="mt-4 table table-striped table-hover">
 
- <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">Doctor Name</th>
-        <th scope="col">Speciality</th>
-        <th scope="col">Hospital</th>
-        <th scope="col">Contact</th>
-        </tr>
-    </thead>
-    <tbody>
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Speciality</th>
+            <th scope="col">Hospital</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Added On</th>
+            <th scope="col">Updated On</th>
+            <th scope="col" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
     
             @foreach($doctors as $doctor)
                 <tr>
@@ -49,7 +52,6 @@
         </tbody>
     </table>
 
-    </div>
 </div>
 @endsection
 
