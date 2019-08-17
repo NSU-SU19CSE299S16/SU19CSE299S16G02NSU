@@ -10,7 +10,7 @@
             <input type="text" name="name" class="form-control" placeholder="{{$doctor->doc_name}}">
             </div>
             <div class="col">
-            <input type="text" name="spec" class="form-control" placeholder="{{$doc->doc_spec}}">
+            <input type="text" name="spec" class="form-control" placeholder="{{$doctor->doc_spec}}">
             </div>
         </div>
         <button type="submit" class="btn btn-primary my-3">UPDATE</button>
