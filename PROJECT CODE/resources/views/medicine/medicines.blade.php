@@ -20,9 +20,6 @@
     <div class="row">
         @foreach($meds as $med)
             <div class="col-md-2">
-
-                <!-- <div class="card-link"> -->
-                    <!-- <a href="#"> -->
                         <div class="card my-3">
                             <div class="card-img">
                                 <img class="card-img-top" src="{{asset('assets/entacyd.jpg')}}" alt="Card image cap">
@@ -33,8 +30,6 @@
                             </div>
 
                         </div>
-                    <!-- </a> -->
-                <!-- </div> -->
             </div>
         @endforeach
     </div>    
