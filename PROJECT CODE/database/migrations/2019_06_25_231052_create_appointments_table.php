@@ -17,7 +17,7 @@ class CreateAppointmentsTable extends Migration
             $table->bigIncrements('app_id');
             $table->integer('user_id');
             $table->integer('doctor_id');
-            $table->date('app_date');	
+            $table->date('app_date')->nullable();	
             $table->timestamps();
         });
     }

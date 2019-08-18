@@ -11,7 +11,7 @@ class DoctorController extends Controller
     //show all doctors
     public function index(){
         $doctors = DB::table('doctors')->get();
-        return view('doctor.doctors', ['doctor' => $doctors]);
+        return view('doctor.doctors', ['doctors' => $doctors]);
     
     }
 
