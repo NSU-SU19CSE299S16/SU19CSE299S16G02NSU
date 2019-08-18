@@ -13,6 +13,8 @@
   <p>{{$doctor->doc_name}}</p>
   <form action="{{route('appointment.store')}}" method="POST">
     @csrf
+      <input type="text" name="doctor_id" class="form-control" placeholder="{{$doctor->doc_id}}">
+
         <div class="text-right mt-5">
             <button type="submit" class="crt-btn">Make Appointment</button>
         </div>
