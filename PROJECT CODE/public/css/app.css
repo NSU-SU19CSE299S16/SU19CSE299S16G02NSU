@@ -11110,7 +11110,7 @@ a {
 
 html,
 body {
-  font-family: "Open-sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-brand {
@@ -11178,8 +11178,8 @@ div {
 
 .agent button:hover {
   color: #ffffff !important;
-  background: #F77F00;
-  border-color: #F77F00 !important;
+  background: #f77f00;
+  border-color: #f77f00 !important;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
@@ -11206,8 +11206,8 @@ div {
 
 .med-btn:hover {
   color: #ffffff !important;
-  background: #F77F00;
-  border-color: #F77F00 !important;
+  background: #f77f00;
+  border-color: #f77f00 !important;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
@@ -11218,7 +11218,7 @@ div {
   text-decoration: none;
   background: #ffffff;
   padding: 0.7rem;
-  border: 4px solid #00171F !important;
+  border: 4px solid #00171f !important;
   display: inline-block;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -11231,44 +11231,44 @@ div {
 .crt-btn:hover {
   color: #ffffff !important;
   background: #003459;
-  border-color: #00171F !important;
+  border-color: #00171f !important;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
 @-webkit-keyframes color {
   0% {
-    color: #D62828;
+    color: #d62828;
   }
 
   33% {
-    color: #F77F00;
+    color: #f77f00;
   }
 
   67% {
-    color: #FCBF49;
+    color: #fcbf49;
   }
 
   100% {
-    color: #EAE2B7;
+    color: #eae2b7;
   }
 }
 
 @keyframes color {
   0% {
-    color: #D62828;
+    color: #d62828;
   }
 
   33% {
-    color: #F77F00;
+    color: #f77f00;
   }
 
   67% {
-    color: #FCBF49;
+    color: #fcbf49;
   }
 
   100% {
-    color: #EAE2B7;
+    color: #eae2b7;
   }
 }
 
@@ -11333,18 +11333,6 @@ div {
 
 .porder .porders-ordernum {
   border-bottom: 1.5px solid rgba(159, 177, 188, 0.2);
-}
-
-.card-link {
-  position: relative;
-}
-
-.card-link a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
 }
 
 .card {
