@@ -42,7 +42,7 @@
                             <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Doctors</a>
+                            <a class="nav-link" href="{{route('doctor.index')}}">Make Appointment</a>
                         </li>
                     </ul>
 
