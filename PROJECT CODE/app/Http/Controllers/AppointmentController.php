@@ -12,12 +12,12 @@ class AppointmentController extends Controller
     $data = DB::table('appointments')->insert(
         [ 
             'user_id' => \Auth::id(),
-            'pay_method' =>  $request->pay_method,
-            'total' => Cart::total(),
+            'doctor_id' =>  $request->doctor_id,
+            'app_date' => NULL,
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->route('doctor.doctors')->with('success', 'Appointment Successfully Requested. You will be notified after confirmation.');
+        return redirect()->route('doctor.index')->with('success', 'Appointment Successfully Requested. You will be notified after confirmation.');
 
     }
    
