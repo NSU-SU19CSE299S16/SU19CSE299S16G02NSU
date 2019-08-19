@@ -71,7 +71,14 @@ class OrderController extends Controller
         ->get();    
         // dd($orders);
 
-        return view('order.past_orders', ['orders' => $orders]);
+        $order_medicines = DB::table('orders')
+        ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
+        ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
+        ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'order_medicines.quantity','orders.user_id', 'orders.total', 'orders.order_id')
+        ->where('user_id' , \Auth::id())
+        ->get();
+
+        return view('order.past_orders', ['orders' => $orders, 'order_medicines' => $order_medicines]);
     }
 
     public function check_pay(Request $request){
