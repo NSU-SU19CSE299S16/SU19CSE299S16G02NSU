@@ -31,7 +31,7 @@
         <div class="admin-count col-md-3">
             <div class="card ">
                 <div class="card-body d-flex justify-content-between">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-shopping-cart"></i>
                 <p>{{$order_count}}</p>
                 </div>
             </div>
