@@ -5,10 +5,14 @@
 <div class="container">
 
 
-    <div class="porders-head">
+    <div class="page-heading my-4">
         <h2>My Past Orders</h2>
     </div>
     @foreach($orders as $order)
+
+    <div class="card">
+    <div class="card-body">
+    
 
     <div class="porder">
         <div class="d-flex justify-content-between">
@@ -42,8 +46,8 @@
 
         <div class="tab-pane fade" id="medicines-ordered-{{$order->order_id}}" role="tabpanel" aria-labelledby="medicines-ordered-{{$order->order_id}}-tab">
 
-            <table class="mt-4 table table-hover">
-            <thead class="">
+            <table class="mt-4 table table-hover table-striped table-borderless">
+            <thead class="thead-dark">
                 <tr class="">
                 <th scope="col" colspan="5">Medicine Name</th>
                 <th scope="col">Unit Price</th>
@@ -80,6 +84,9 @@
 
         </div>
 
+    </div>
+    
+    </div>
     </div>
 
     @endforeach
