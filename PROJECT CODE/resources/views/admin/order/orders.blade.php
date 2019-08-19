@@ -21,6 +21,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($orders as $order)
+                <tr>
+                <th scope="row">{{$order->order_id}}</th>
+                <td>{{$order->name}}</td>
+                <td>{{$order->total}}</td>
+                <td>{{$order->pay_method}}</td>
+                <td>{{$order->created_at}}</td>
+                <td>{{$order->order_status}}</td>
+                <td>{{$order->updated_at}}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 
