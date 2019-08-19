@@ -11133,6 +11133,11 @@ body {
   color: #fff !important;
 }
 
+.page-heading {
+  border-bottom: 1.5px solid rgba(159, 177, 188, 0.2);
+  padding-bottom: 1rem;
+}
+
 div {
   display: block;
 }
