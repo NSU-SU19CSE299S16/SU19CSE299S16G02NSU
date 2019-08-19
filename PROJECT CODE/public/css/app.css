@@ -11333,11 +11333,13 @@ div {
 }
 
 .porder .porders-head {
-  border-bottom: 1.5px solid rgba(159, 177, 188, 0.3);
+  border-bottom: 1.5px solid rgba(159, 177, 188, 0.6);
 }
 
 .porder .porders-ordernum {
-  border-bottom: 1.5px solid rgba(159, 177, 188, 0.2);
+  border-bottom: 1.5px solid rgba(159, 177, 188, 0.5);
+  padding-bottom: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .card {

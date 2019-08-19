@@ -213,11 +213,13 @@ div {
     background-color: #fff;
 
     .porders-head {
-        border-bottom: 1.5px solid rgba(#9fb1bc, 0.3);
+        border-bottom: 1.5px solid rgba(#9fb1bc, 0.6);
     }
 
     .porders-ordernum {
-        border-bottom: 1.5px solid rgba(#9fb1bc, 0.2);
+        border-bottom: 1.5px solid rgba(#9fb1bc, 0.5);
+        padding-bottom: 0.7rem;
+        margin-bottom: 1rem;
     }
 }
 

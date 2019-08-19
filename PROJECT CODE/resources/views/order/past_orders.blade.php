@@ -10,14 +10,14 @@
     </div>
     @foreach($orders as $order)
 
-    <div class="card">
+    <div class="card pb">
     <div class="card-body">
     
 
     <div class="porder">
         <div class="d-flex justify-content-between">
             <h4 class="porders-ordernum lead">
-                Order Number: {{$order->order_id}}
+                Order <i class="fas fa-hashtag"></i> {{$order->order_id}}
             </h4>
 
         </div>
@@ -27,7 +27,7 @@
 
 
 
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <ul class="nav nav-pills mb-3 order-tab" id="pills-tab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="order-details-{{$order->order_id}}-tab" data-toggle="pill" href="#order-details-{{$order->order_id}}" role="tab" aria-controls="order-details-{{$order->order_id}}" aria-selected="true">Details</a>
         </li>
