@@ -44,22 +44,6 @@ class OrderController extends Controller
             ]);
     }
 
-    public function details(Request $request){
-
-        $order = DB::table('orders')->where('order_id' , $request->id)->first();
-
-        $order_medicines = DB::table('orders')
-            ->join('order_medicines', 'orders.order_id', '=', 'order_medicines.order_id')
-            ->join('medicines', 'medicines.med_id', '=', 'order_medicines.med_id')
-            ->select('medicines.med_price',  'medicines.med_name', 'medicines.med_id', 'order_medicines.quantity','orders.user_id', 'orders.total', 'orders.order_id')
-            ->where('user_id' , \Auth::id())
-            ->get();
-        return view('order.details', ['order' => $order, 'order_medicines' => $order_medicines, 'id' => $request->id]);
-
-    }
-
-    public function show(){
-    }
 
 
 
