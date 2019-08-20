@@ -50,7 +50,7 @@ In our homepage, we have options of login for **admin** and login and register b
 ## **USER:**
 After the user logs in , the page includes **featured medicines** and a **search bar**. Along with these two, it also has the option to redirect to the **‘medicines’** and **‘make appointment’** page.
 
-## MEDICINE:
+## ** MEDICINE:**
 The featured medicine has an **‘add to card’** form below it , which redirects it to another page which asks if we want to **continue shopping** or **proceed to checkout.**
 
 ## PAYMENT METHODS:
@@ -63,3 +63,8 @@ After placing the order,  if we want to view the **user’s past orders**, it wi
 ## Make Appointment:
 This page stores the data of all the **doctors**. It also has a button for every doctor, which can generate the appointments.
 
+## ADMIN:
+The admin  has a *dashboard* which contains information of 
+  *doctors, 
+  * medicines and 
+  * orders.
