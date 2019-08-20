@@ -48,5 +48,4 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 In our homepage, we have options of login for **admin** and login and register both for the **users.**
 
 
-ordering medication to emergency cases.
 
