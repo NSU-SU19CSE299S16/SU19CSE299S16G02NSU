@@ -33,9 +33,8 @@
                         <h4 >In Stock</h4>
                         <p class="qua-price mb-2">Quantity and Price</p>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02">
-                                <option selected>Choose...</option>
-                                <option value="1">1 - ৳{{$medicine->med_price * 1}}</option>
+                            <select class="custom-select" id="med-select" name="med-select">
+                                <option value="1" selected>1 - ৳{{$medicine->med_price * 1}}</option>
                                 <option value="2">2 - ৳{{$medicine->med_price * 2}}</option>
                                 <option value="3">3 - ৳{{$medicine->med_price * 3}}</option>
                                 <option value="3">4 - ৳{{$medicine->med_price * 4}}</option>
@@ -44,6 +43,8 @@
                                 <option value="3">7 - ৳{{$medicine->med_price * 7}}</option>
                             </select>
                         </div>
+                        
+                        <button type="button" class="btn btn-block">ADD TO CART</button>
                     </div>
 
                 </div>

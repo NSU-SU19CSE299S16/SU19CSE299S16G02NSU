@@ -279,4 +279,11 @@ div {
         border-bottom: 1px solid rgba(#9fb1bc, 0.2);
         padding-bottom: 0.5rem;
     }
+    button {
+        color: white;
+        border-radius: 2px;
+        background-color: $primary-color !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }

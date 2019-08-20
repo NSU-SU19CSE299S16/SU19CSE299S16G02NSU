@@ -11400,3 +11400,13 @@ div {
   padding-bottom: 0.5rem;
 }
 
+.med-img-section button,
+.med-details-section button,
+.cart-section button {
+  color: white;
+  border-radius: 2px;
+  background-color: #ef8354 !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
