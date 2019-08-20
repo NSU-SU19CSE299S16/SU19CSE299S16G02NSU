@@ -1752,7 +1752,7 @@ __webpack_require__.r(__webpack_exports__);
 
     Fire.$on("searching", function () {
       var query = _this.$parent.search;
-      axios.get("http://hamds.test/api/findDoctor?" + query).then(function (data) {
+      axios.get("http://hamds.test/api/findDoctor?q=" + query).then(function (data) {
         _this.doctors = data.data;
       })["catch"](function () {});
     });

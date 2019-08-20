@@ -53,7 +53,7 @@ export default {
     Fire.$on("searching", () => {
       let query = this.$parent.search;
       axios
-        .get("http://hamds.test/api/findDoctor?" + query)
+        .get("http://hamds.test/api/findDoctor?q=" + query)
         .then(data => {
           this.doctors = data.data;
         })
