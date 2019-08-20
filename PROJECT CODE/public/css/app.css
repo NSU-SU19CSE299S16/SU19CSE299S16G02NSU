@@ -11342,19 +11342,32 @@ div {
   margin-bottom: 1rem;
 }
 
-.card {
+.med-card {
+  border: none;
   /* Bottom right text */
 }
 
-.card .card-img {
+.med-card .card-img {
   position: relative;
+  border-bottom: 1px solid rgba(159, 177, 188, 0.2);
 }
 
-.card .med-details {
+.med-card .card-body {
+  font-size: 0.8rem;
+}
+
+.med-card .card-body button {
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 2px;
+  background-color: #ef8354 !important;
+}
+
+.med-card .med-details {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
+  bottom: 5px;
+  right: 0px;
+  background-color: rgba(79, 93, 117, 0.57);
   color: white;
   padding-left: 20px;
   padding-right: 20px;

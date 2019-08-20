@@ -9,6 +9,8 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+$primary-color: #ef8354;
+
 $navheight: 4rem;
 
 searchBar {
@@ -223,17 +225,27 @@ div {
     }
 }
 
-.card {
+.med-card {
+    border: none;
     .card-img {
         position: relative;
+        border-bottom: 1px solid rgba(#9fb1bc, 0.2);
     }
-
+    .card-body {
+        font-size: 0.8rem;
+        button {
+            color: white;
+            font-size: 0.7rem;
+            border-radius: 2px;
+            background-color: $primary-color !important;
+        }
+    }
     /* Bottom right text */
     .med-details {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
-        background-color: black;
+        bottom: 5px;
+        right: 0px;
+        background-color: rgba(#4f5d75, 0.57);
         color: white;
         padding-left: 20px;
         padding-right: 20px;

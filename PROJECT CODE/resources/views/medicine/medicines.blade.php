@@ -21,7 +21,7 @@
     <div class="row">
         @foreach($meds as $med)
             <div class="col-md-3">
-                        <div class="card my-3">
+                        <div class="card my-3 med-card">
                             <div class="card-img">
                                 <img class="card-img-top" src="{{asset('assets/entacyd.jpg')}}" alt="Card image cap">
                                 <div class="med-details">500mg Tablet</div>
@@ -37,11 +37,11 @@
                                         <input type="hidden" name="id" value="{{$med->med_id}}">
                                         <input type="hidden" name="price" value="{{$med->med_price}}">
                                         <input type="hidden" name="name" value="{{$med->med_name}}">
-                                        <button type="submit" class="btn btn-info"><i class="fas fa-shopping-cart"></i></button>
+                                        <button type="submit" class="btn"><i class="fas fa-shopping-cart"></i></button>
                                     </form>                                    
                                     <form action="{{route('medicine.show',['id' => $med->med_id])}}" method="GET">
                                         @csrf
-                                        <button type="submit" class="btn btn-info">DETAILS</button>
+                                        <button type="submit" class="btn">DETAILS</button>
                                     </form>
                                     </div>
                                 </div>

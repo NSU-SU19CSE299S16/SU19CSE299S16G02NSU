@@ -24,7 +24,7 @@
     <div class="row">
         @foreach($meds as $med)
             <div class="col-md-3">
-                        <div class="card my-3">
+                        <div class="card my-3 med-card">
                             <div class="card-img">
                                 <img class="card-img-top" src="{{asset('assets/entacyd.jpg')}}" alt="Card image cap">
                                 <div class="med-details">500mg Tablet</div>
