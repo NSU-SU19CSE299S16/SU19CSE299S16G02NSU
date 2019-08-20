@@ -11364,3 +11364,10 @@ div {
   font-size: 3rem;
 }
 
+.orders-tab .nav-item .nav-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  background-color: none !important;
+}
+
