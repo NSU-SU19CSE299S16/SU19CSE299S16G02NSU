@@ -10,15 +10,14 @@ class DoctorController extends Controller
 
     //show all doctors
     public function index(){
-        $doctors = DB::table('doctors')->get();
-        return view('doctor.doctors', ['doctor' => $doctors]);
-    
+        $doctors = DB::table('doctors')->paginate(10);
+        return view('doctor.doctors', ['doctors' => $doctors]);
     }
 
     //show a specific doctor
     public function show($id){
         $doctor = DB::table('doctors')->where('doc_id', $id)->first();
-        return view('doctor.doctors', ['doctor' => $doctor]);
+        return view('doctor.doctor', ['doctor' => $doctor]);
     
     }
     
@@ -33,7 +32,7 @@ class DoctorController extends Controller
 
     public function create(){
     
-        return view('admin.doctor.adddoctor');
+        return view('admin.doctor.create');
 
     }
 
@@ -44,7 +43,10 @@ class DoctorController extends Controller
         DB::table('doctors')->insert(
             [ 
                 'doc_name' => $request->name,
-                'doc_spec' => $request->spec
+                'doc_spec' => $request->spec,
+                'doc_hospital'=> $request->hospital,
+                'doc_contact' => $request->contact,
+                'created_at' => date('Y-m-d H:i:s')
             ]
         );
 
@@ -68,9 +70,12 @@ class DoctorController extends Controller
         DB::table('doctors')
             ->where('doc_id', $id)
             ->update(
-                [
+                [ 
                     'doc_name' => $request->name,
-                    'doc_spec' => $request->spec
+                    'doc_spec' => $request->spec,
+                    'doc_hospital'=> $request->hospital,
+                    'doc_contact' => $request->contact,
+                    'updated_at' => date('Y-m-d H:i:s')
                 ]
         );
 

@@ -9,6 +9,8 @@
 
     <title>{{ config('app.name', 'HAMDS') }}</title>
 
+    <script src="https://kit.fontawesome.com/813659588a.js"></script>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -40,7 +42,7 @@
                             <a class="nav-link" href="{{route('medicine.index')}}">Medicines</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Doctors</a>
+                            <a class="nav-link" href="{{route('doctor.index')}}">Make Appointment</a>
                         </li>
                     </ul>
 
@@ -49,7 +51,7 @@
                     
                         <!-- this will be removed later, added to get easy access to the admin area -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cart.index') }}">Cart</a>
+                            <a class="nav-link" href="{{ route('cart.index') }}" style="font-size: 1rem;"><i class="fas fa-shopping-cart"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/admin">Admin</a>
@@ -71,12 +73,18 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                              
+                                    <a class="dropdown-item" href="{{ route('order.past_orders') }}">
+                                       View Past Orders
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        Account Settings
+                                    </a>      
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                    </a>      
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -89,7 +97,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

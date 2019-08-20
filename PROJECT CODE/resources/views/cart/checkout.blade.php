@@ -2,27 +2,35 @@
 
 @section('content')
 <div class="container">
-    <form action="{{route('Order.store')}}" method="POST">
+
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+@if (session('error'))
+<div class="alert alert-danger">
+    {{ session('error') }}
+</div>
+@endif
+    <h4>Please Select Payment Method</h4>
+    <br>
+    <br>
+    <form action="{{route('orders.store')}}" method="POST">
     @csrf
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="pay_method" id="bkash" value="bkash" checked>
-        <label class="form-check-label" for="bkash">
-            bKash
+    <div class="d-flex flex-row justify-content-center">
+        <label class="pay_method">
+            <input type="radio" name="pay_method" value="bkash" >
+            <img src="{{asset('assets/bkash-logo.jpg')}}">        
         </label>
-        </div>
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="pay_method" id="rocket" value="rocket">
-        <label class="form-check-label" for="rocket">
-            Rocket
-        </label>
-        </div>
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="pay_method" id="ucash" value="ucash">
-        <label class="form-check-label" for="ucash">
-            Ucash
+        <label class="pay_method mx-3">
+            <input type="radio" name="pay_method" value="ucash" >
+            <img src="{{asset('assets/ucash-logo.png')}}">        
         </label>
     </div>
-        <button type="submit" class="btn btn-warning">Place Order</button>
+        <div class="text-center mt-5">
+            <button type="submit" class="crt-btn">Place Order</button>
+        </div>
     </form>
 
 

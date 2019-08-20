@@ -2,21 +2,24 @@
 
 @section('content')
 <div class="container">
-    <h4 class="text-center lead">All Medicines</h4>
 
-    <div class="text-center py-3"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+    <div class="d-flex justify-content-between">
+        <h4 class="admin-heading"><i class="fas fa-pills"></i> Medicines</h4>
 
-    <table class="table table-hover table-info">
-        <thead>
-            <tr class="bg-info">
-            <th scope="col">#</th>
+        <div class="admin-add-btn"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+    </div>
+
+
+    <table class="mt-4 table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr class="">
+            <th scope="col">ID</th>
             <th scope="col">Medicine Name</th>
             <th scope="col">In Stock</th>
             <th scope="col">Price</th>
             <th scope="col">Added</th>
             <th scope="col">Updated</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col" colspan="2">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,12 +33,12 @@
                 <td>{{$medicine->updated_at}}</td>
                 <td>
                 <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
-                <button type="submit" class="btn btn-danger">DELETE</button>
+                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 </td>
                 <td>
                 <form action="{{route('medicine.edit', ['id' => $medicine->med_id])}}" method="GET">
-                <button type="submit" class="btn btn-info">EDIT</button>
+                <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
                 </tr>

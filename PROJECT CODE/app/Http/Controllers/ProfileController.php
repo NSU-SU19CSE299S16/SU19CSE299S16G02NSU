@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
-use Cart;
+use DB;
 
-class CartController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,13 @@ class CartController extends Controller
      */
     public function index()
     {
-        return view('cart.index');
+        $user =   DB::table('users')->where('id', \Auth::id())->first();
+        if($user){
+            return view('auth.profile', ['user' => $user]);
+        }
+        else{
+            return redirect()->route('home')->with('error','Page Does Not Exist!');
+        }
     }
 
     /**
@@ -35,12 +42,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::setGlobalTax(0);
-
-
-        Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $request->qty, 'price' => $request->price, 'weight' => 1]);
-        return redirect()->route('cart.index')->with('success', 'Medicine successfully added to cart!');
-
+        //
     }
 
     /**
@@ -60,18 +62,6 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-     
-    public function checkout(){
-
-        if(Cart::total() == 0){
-            return redirect()->route('medicine.index')->with('error', 'Error: Please add a medcine to cart and then checkout.');
-        }
-        else{
-        return view('cart.checkout');
-        }
-
-    }
     public function edit($id)
     {
         //
@@ -84,9 +74,23 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $pro_pic = $request->file('profile_picture');
+        $extension = $pro_pic->getClientOriginalExtension();
+        Storage::disk('public')->put($pro_pic->getFilename().'.'.$extension,  File::get($pro_pic));
+    
+
+        DB::table('users')
+            ->where('id', \Auth::id())
+            ->update([
+                'mime' => $pro_pic->getClientMimeType(),
+                'original_filename' => $pro_pic->getClientOriginalName(),
+                'filename' => $pro_pic->getFilename().'.'.$extension
+                ]);
+
+        return redirect()->route('profile')
+                ->with('success','Profile Picture added successfully...');        
     }
 
     /**
