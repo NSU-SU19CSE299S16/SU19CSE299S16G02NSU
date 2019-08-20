@@ -39,7 +39,7 @@ class CartController extends Controller
 
 
         Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $request->qty, 'price' => $request->price, 'weight' => 1]);
-        return redirect()->route('cart.index');
+        return redirect()->route('cart.index')->with('success', 'Medicine successfully added to cart!');
 
     }
 
