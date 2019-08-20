@@ -1,7 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-3">
+
+@if (session('success'))
+<div class="alert alert-success">
+	{{ session('success') }}
+</div>
+@endif
+@if (session('error'))
+<div class="alert alert-danger">
+	{{ session('error') }}
+</div>
+@endif
 	<div class="row">
 		<div class="col-md-7">
 			<table class="table table-hover table-dark" >

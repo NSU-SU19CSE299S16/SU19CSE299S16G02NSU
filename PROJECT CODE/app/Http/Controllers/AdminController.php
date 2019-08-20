@@ -15,4 +15,14 @@ class AdminController extends Controller
 
         return view('admin.dashboard',['med_count'=>$med_count,  'order_count'=>$order_count, 'user_count'=>$user_count, 'doc_count'=>$doc_count]);
     }
+
+    public function orders(){
+        $orders= DB::table('orders')
+            ->join('users', 'orders.user_id', '=', 'users.id')
+            ->select('users.name','orders.created_at','orders.updated_at','orders.pay_method','orders.order_status','orders.user_id', 'orders.total', 'orders.order_id')
+            ->get();
+
+        return view('admin.order.orders',['orders'=>$orders]);
+    }
+
 }
