@@ -1,25 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h4 class="text-center lead">Medicine Information</h4>
+<div class="container mt-3">
 
-    <div class="list-group mt-5">
+        <div class="row">
+            <div class="col-md-3 mt-4 card med-img-section">
+                <div class="card-body">
+                    
+                    <img class="" src="{{asset('assets/entacyd.jpg')}}" alt="" width="100%">
+                </div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-2 text-center">
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_name}}</a>
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_stock}}</a>
-                <a href="" class="list-group-item list-group-item-action list-group-item-success">{{$medicine->med_price}} Taka</a>
+            </div>
+            <div class="col-md-6 card">
                 
-                <form method="POST" action="{{route('cart.store')}}">
-                    @csrf
-                    <input type="hidden" name="id" value="{{$medicine->med_id}}">
-                    <input type="hidden" name="name" value="{{$medicine->med_name}}">
-                    <input type="hidden" name="price" value="{{$medicine->med_price}}">
-                    <button type="submit" class="btn btn-primary my-3">Add To Cart</button>
+                <div class="card-body">
+                    <h4 class="card-title">{{$medicine->med_name}}</h4>
+                    <p>
+                        By Square Pharmaceuticals
+                    </p>
+                    <div class="med_price">
+                        <p>Taka {{$medicine->med_price}} (per unit)</p>
+                    </div>
 
-                </form>
+                    <div class="product_details">
+                        <h6>Product Details</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="cart-section">
+                    <h4>In Stock</h4>
+
+                </div>
             </div>
         </div>
 
