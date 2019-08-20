@@ -9,49 +9,8 @@
 
         <div class="admin-add-btn"><a href="{{route('doctor.create')}}"><button class="btn btn-primary ">Add New Doctor</button></a></div>
     </div>
-
-
-
-    <table class="mt-4 table table-striped table-hover">
-
-        <thead class="thead-dark">
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Doctor Name</th>
-            <th scope="col">Speciality</th>
-            <th scope="col">Hospital</th>
-            <th scope="col">Contact</th>
-            <th scope="col">Added On</th>
-            <th scope="col">Updated On</th>
-            <th scope="col" colspan="2">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
     
-            @foreach($doctors as $doctor)
-                <tr>
-                <th scope="row">{{$doctor->doc_id}}</th>
-                <td>{{$doctor->doc_name}}</td>
-                <td>{{$doctor->doc_spec}}</td>
-                <td>{{$doctor->doc_hospital}}</td>
-                <td>{{$doctor->doc_contact}}</td>
-                <td>{{$doctor->created_at}}</td>
-                <td>{{$doctor->updated_at}}</td>
-                <td>
-                <form action="{{route('doctor.destroy', ['id' => $doctor->doc_id])}}" method="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                </form>
-                </td>
-                <td>
-                <form action="{{route('doctor.edit', ['id' => $doctor->doc_id])}}" method="GET">
-                <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
-                </form>
-                </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-
+    <doc-table :doctors="{{$doctors}}"></doc-table>
 </div>
 @endsection
 
