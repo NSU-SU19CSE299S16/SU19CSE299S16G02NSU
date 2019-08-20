@@ -65,6 +65,6 @@ This page stores the data of all the **doctors**. It also has a button for every
 
 ## ADMIN:
 The admin  has a *dashboard* which contains information of 
-  *doctors, 
+  * doctors, 
   * medicines and 
   * orders.
