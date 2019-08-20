@@ -68,3 +68,15 @@ The admin  has a *dashboard* which contains information of
   * doctors, 
   * medicines and 
   * orders.
+  
+  
+## Doctors:
+Stores the information of all the doctors and can add new doctors.
+
+## Medicines:
+Stores the information of all medicine and can add new medicines.
+
+## Orders:
+This views information about all the orders placed.
+
+
