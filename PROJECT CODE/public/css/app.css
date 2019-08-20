@@ -11111,6 +11111,7 @@ a {
 html,
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #fff;
 }
 
 .navbar-brand {
@@ -11386,7 +11387,16 @@ div {
   background-color: none !important;
 }
 
-.med-img-section {
+.med-img-section,
+.med-details-section,
+.cart-section {
   border: none;
+}
+
+.med-img-section h4,
+.med-details-section h4,
+.cart-section h4 {
+  border-bottom: 1px solid rgba(159, 177, 188, 0.2);
+  padding-bottom: 0.5rem;
 }
 
