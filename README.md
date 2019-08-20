@@ -47,5 +47,7 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 ## **Project Report**
 In our homepage, we have options of login for **admin** and login and register both for the **users.**
 
+### **USER:**
+After the user logs in , our Homepage which includes featured medicines and a search bar. Along with these too, they also have the option to the ‘medicines’ and ‘make appointment’ page.
 
 
