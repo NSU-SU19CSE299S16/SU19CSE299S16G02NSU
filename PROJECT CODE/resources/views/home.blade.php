@@ -40,6 +40,7 @@
                                         <input type="hidden" name="id" value="{{$med->med_id}}">
                                         <input type="hidden" name="price" value="{{$med->med_price}}">
                                         <input type="hidden" name="name" value="{{$med->med_name}}">
+                                        <input type="hidden" name="qty" value="1">
                                         <button type="submit" class="btn "><i class="fas fa-shopping-cart"></i></button>
                                     </form>                                    
                                     <form action="{{route('medicine.show',['id' => $med->med_id])}}" method="GET">
