@@ -40,11 +40,11 @@
                                         <input type="hidden" name="id" value="{{$med->med_id}}">
                                         <input type="hidden" name="price" value="{{$med->med_price}}">
                                         <input type="hidden" name="name" value="{{$med->med_name}}">
-                                        <button type="submit" class="btn btn-info"><i class="fas fa-shopping-cart"></i></button>
+                                        <button type="submit" class="btn "><i class="fas fa-shopping-cart"></i></button>
                                     </form>                                    
                                     <form action="{{route('medicine.show',['id' => $med->med_id])}}" method="GET">
                                         @csrf
-                                        <button type="submit" class="btn btn-info">DETAILS</button>
+                                        <button type="submit" class="btn">DETAILS</button>
                                     </form>
                                     </div>
                                 </div>

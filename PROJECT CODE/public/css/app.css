@@ -11361,6 +11361,8 @@ div {
   font-size: 0.7rem;
   border-radius: 2px;
   background-color: #ef8354 !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .med-card .med-details {
