@@ -59,3 +59,7 @@ Medicines can also be order by going to the **medicine page** from the home page
 
 ## ORDER:
 After placing the order,  if we want to view the **user’s past orders**, it will show that the order status is **‘Completed’** if the transaction ID is given correctly. If not, the order status shows **‘Pending’.**
+
+## Make Appointment:
+This page stores the data of all the **doctors**. It also has a button for every doctor, which can generate the appointments.
+
