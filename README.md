@@ -44,11 +44,11 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 <br>
 
 
-## **Project details:**
-## **1) Project Idea in brief:**
+## **Project Report**
+In our homepage, we have options of login for **admin** and login and register both for the **users.**
 
 
-## **a) What problem are we trying to solve:**
+## **a**
 In this day and age, people often find themselves unable to find the time to look after themselves and their health. As a result, major health issues are more likely to occur. In Bangladesh, there are not many pharmacies which are open 24/7.  With growing population every year, people dying due to lack of medication are increasing. This emphasizes the need for developing smart solutions to provide better quality healthcare services to all masses. It is undoubtedly true that technology is an important part of our daily lives. Nowadays, most people have computers, laptops, tablets and even smartphones. These devices have made communication easier. Nowadays, you can browse the internet from anywhere, anytime. Also, the technology has increased immensely in the past few years. Through our project, we intend to help our users and take care of all their healthcare needs. For cases of emergency, even after midnight, our team will be working so that our users will always have someone by their side when they need it. 
 
 
