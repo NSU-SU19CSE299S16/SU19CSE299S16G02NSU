@@ -27,21 +27,24 @@
                                 <div class="med-details">500mg Tablet</div>
                             </div>
 
-                            <div class="d-flex justify-content-between">
 
                                 <div class="card-body">
-                                    <h5 class="card-title text-left">{{$med->med_name}}</h5>
+                                    <h5 class="card-title text-center">{{$med->med_name}}</h5>
+                                    
+                                    <div class="d-flex justify-content-between px-4">
+                                    <form action="{{route('cart.store')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{$med->med_id}}">
+                                        <input type="hidden" name="price" value="{{$med->med_price}}">
+                                        <input type="hidden" name="name" value="{{$med->med_name}}">
+                                        <button type="submit" class="btn btn-info"><i class="fas fa-shopping-cart"></i></button>
+                                    </form>                                    
+                                    <form action="{{route('medicine.show',['id' => $med->med_id])}}" method="GET">
+                                        @csrf
+                                        <button type="submit" class="btn btn-info">DETAILS</button>
+                                    </form>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center mr-3">
-                                <form action="{{route('cart.store')}}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="id" value="{{$med->med_id}}">
-                                    <input type="hidden" name="price" value="{{$med->med_price}}">
-                                    <input type="hidden" name="name" value="{{$med->med_name}}">
-                                    <button type="submit" class="btn btn-info"><i class="fas fa-shopping-cart"></i></button>
-                                </form>
-                                </div>
-                            </div>
                         </div>
             </div>
         @endforeach
