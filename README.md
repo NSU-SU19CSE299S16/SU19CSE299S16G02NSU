@@ -47,7 +47,9 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 ## **Project Report**
 In our homepage, we have options of login for **admin** and login and register both for the **users.**
 
-### **USER:**
+## **USER:**
 After the user logs in , the page includes **featured medicines** and a **search bar**. Along with these two, it also has the option to redirect to the **‘medicines’** and **‘make appointment’** page.
 
+## MEDICINE:
+The featured medicine has an **‘add to card’** form below it , which redirects it to another page which asks if we want to **continue shopping** or **proceed to checkout.**
 
