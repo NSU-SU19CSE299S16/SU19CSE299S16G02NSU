@@ -16,6 +16,10 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->bigIncrements('doc_id');
             $table->string('doc_name');
+            $table->string('doc_post');
+            $table->string('doc_division');
+            $table->string('doc_address');
+            $table->string('doc_degree');
             $table->string('doc_spec'); //doctor's spceicialty,
             $table->string('doc_hospital'); // the doctor's chamber
             $table->string('doc_contact'); //contact number

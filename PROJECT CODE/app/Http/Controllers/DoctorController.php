@@ -10,9 +10,8 @@ class DoctorController extends Controller
 
     //show all doctors
     public function index(){
-        $doctors = DB::table('doctors')->get();
+        $doctors = DB::table('doctors')->paginate(10);
         return view('doctor.doctors', ['doctors' => $doctors]);
-    
     }
 
     //show a specific doctor
