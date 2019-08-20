@@ -32,8 +32,14 @@
         <dt class="col-sm-3">Specialized In</dt>
         <dd class="col-sm-9">{{$doctor->doc_spec}}</dd>
 
+        <dt class="col-sm-3">Doctor Post</dt>
+        <dd class="col-sm-9">Dhaka</dd>
+
         <dt class="col-sm-3">Division</dt>
         <dd class="col-sm-9">Dhaka</dd>
+
+      <dt class="col-sm-3">Division</dt>
+      <dd class="col-sm-9">Dhaka</dd>
 
         <dt class="col-sm-3">Degree</dt>
         <dd class="col-sm-9">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, repellendus.</dd>
