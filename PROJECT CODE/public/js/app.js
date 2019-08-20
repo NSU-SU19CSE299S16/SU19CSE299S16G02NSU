@@ -1746,6 +1746,16 @@ __webpack_require__.r(__webpack_exports__);
   props: ["doctors"],
   data: function data() {
     return {};
+  },
+  created: function created() {
+    var _this = this;
+
+    Fire.$on("searching", function () {
+      var query = _this.$parent.search;
+      axios.get("http://hamds.test/api/findDoctor?" + query).then(function (data) {
+        _this.doctors = data.data;
+      })["catch"](function () {});
+    });
   }
 });
 
@@ -49273,6 +49283,7 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+window.Fire = new Vue();
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -49291,7 +49302,15 @@ Vue.component("doc-table", __webpack_require__(/*! ./components/DoctorTable.vue 
  */
 
 var app = new Vue({
-  el: "#app"
+  el: "#app",
+  data: {
+    search: ""
+  },
+  methods: {
+    searchit: function searchit() {
+      Fire.$emit("searching");
+    }
+  }
 });
 
 /***/ }),

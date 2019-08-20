@@ -8,6 +8,8 @@ require("./bootstrap");
 
 window.Vue = require("vue");
 
+window.Fire = new Vue();
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -28,5 +30,13 @@ Vue.component("doc-table", require("./components/DoctorTable.vue").default);
  */
 
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    data: {
+        search: ""
+    },
+    methods: {
+        searchit() {
+            Fire.$emit("searching");
+        }
+    }
 });

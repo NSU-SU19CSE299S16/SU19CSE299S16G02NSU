@@ -48,6 +48,17 @@ export default {
   props: ["doctors"],
   data() {
     return {};
+  },
+  created() {
+    Fire.$on("searching", () => {
+      let query = this.$parent.search;
+      axios
+        .get("http://hamds.test/api/findDoctor?" + query)
+        .then(data => {
+          this.doctors = data.data;
+        })
+        .catch(() => {});
+    });
   }
 };
 </script>
