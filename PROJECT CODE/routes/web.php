@@ -64,7 +64,7 @@ Route::get('/admin/medicines','MedicineController@adminIndex')->name('admin.medi
 Route::get('/admin/doctors','DoctorController@adminIndex')->name('admin.doctors');
 
 
-Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
+Route::get('/admin', 'AdminController@index')->name('admin.dashboard')->middleware('isAdmin');
 Route::get('/admin/orders', 'AdminController@orders')->name('admin.orders');
 Route::get('/admin/appointments', 'AdminController@appointments')->name('admin.appointments');
 Route::post('/admin/appointments', 'AppointmentController@approve')->name('appointment.approve');
