@@ -4,14 +4,14 @@
 <div class="container">
 
     <div class="d-flex justify-content-between">
-        <h4 class="admin-heading"><i class="fas fa-pills"></i> apps</h4>
+        <h4 class="admin-heading">Appointments</h4>
     </div>
 
 
     <table class="mt-4 table table-striped table-hover">
         <thead class="thead-dark">
             <tr class="">
-            <th scope="col">Appointment ID</th>
+            <th scope="col">ID</th>
             <th scope="col">User Name</th>
             <th scope="col">Doctor Name</th>
             <th scope="col">Appointment Date</th>
@@ -35,6 +35,14 @@
                 <td>{{$doc->doc_name}}</td>
                 @endif
                 @endforeach
+                <td>{{$app->app_date}}</td>
+                <td>{{$app->created_at}}</td>
+                <td>{{$app->updated_at}}</td>
+                <td>
+                    <form action="{{route('appointment.approve', ['id' => $app->app_id])}}" method="GET">
+                    <button type="submit" class="btn btn-warning">Approve</button>
+                    </form>
+                </td>
                 </tr>
             @endforeach
         </tbody>
