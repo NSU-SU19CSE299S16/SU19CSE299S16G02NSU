@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500&display=swap);@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);@import url(https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Monoton&display=swap);@import url(https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap);@import url(https://fonts.googleapis.com/css?family=Lobster&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11110,7 +11110,7 @@ a {
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #fff;
 }
 
@@ -11141,6 +11141,46 @@ body {
 
 div {
   display: block;
+}
+
+.home-section {
+  background-image: url(/images/homepage.jpg?0db103ece74f0c9b5840f75ffb40fbe9);
+  width: 100%;
+  height: 60vh;
+}
+
+.homepage-text {
+  padding-top: 20vh;
+  color: #e2dedd;
+}
+
+.homepage-text h1 {
+  font-family: "Lobster", cursive;
+}
+
+.homepage-text a {
+  text-decoration: none;
+  color: #494949 !important;
+}
+
+.homepage-text button {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 0.6rem;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.homepage-text button:hover {
+  color: #ffffff !important;
+  background: #f77f00;
+  border-color: #f77f00 !important;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .sidebar .nav-link {

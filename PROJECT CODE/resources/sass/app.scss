@@ -1,8 +1,10 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 // Variables
 @import "variables";
 
@@ -21,7 +23,7 @@ a {
 }
 html,
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #fff;
 }
 .navbar-brand {
@@ -48,6 +50,38 @@ body {
 
 div {
     display: block;
+}
+.home-section {
+    background-image: url("../../public/assets/homepage.jpg");
+    width: 100%;
+    height: 60vh;
+}
+.homepage-text {
+    padding-top: 20vh;
+    color: #e2dedd;
+    h1 {
+        font-family: "Lobster", cursive;
+    }
+    a {
+        text-decoration: none;
+        color: #494949 !important;
+    }
+    button {
+        color: #494949 !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 0.6rem;
+        border: 4px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    button:hover {
+        color: #ffffff !important;
+        background: #f77f00;
+        border-color: #f77f00 !important;
+        transition: all 0.4s ease 0s;
+    }
 }
 .sidebar {
     .nav-link {
