@@ -45,6 +45,10 @@ CSE 299 : Junior Design Project, Summer 2019 Section 16 Group 02
 
 
 ## **Project Report**
+## Introduction:
+The healthcare and Medicine Delivery System (HAMDS) is a quick gateway for easier medical transport. It is a system that allows the users to be at ease regarding their medicine transportation and apppointments of doctors. It allows the user to order medicine. The users are also allowed to give appointments of doctors using this website. 
+
+## Features
 In our homepage, we have options of login for **admin** and login and register both for the **users.**
 
 ## **USER:**
