@@ -101,5 +101,10 @@
             @yield('content')
         </main>
     </div>
+    <div class="footer">
+        <div class="text-center">
+        &copyCopyright Hamds 2019
+        </div>
+    </div>
 </body>
 </html>

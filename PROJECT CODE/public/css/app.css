@@ -11244,6 +11244,14 @@ div {
   overflow-y: auto;
 }
 
+.footer {
+  background-color: #161716;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  padding: 1.2rem;
+}
+
 .agent {
   height: 50vh;
   width: 100vh;
