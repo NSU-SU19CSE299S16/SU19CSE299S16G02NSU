@@ -70,6 +70,10 @@ class OrderController extends Controller
         //strcmp is php built-in function which compares two strings
         $payments_received = DB::table('payments_received')->get();
         $match = false;
+        $transaction = DB::table('payments_received')
+        ->where('transaction_id', $transaction_id)
+        ->first(); 
+        $total = $request->total;
         foreach ($payments_received as $pr){
             if(strcmp($pr->transaction_id, $transaction_id) == 0){
                 $match = true;
@@ -83,6 +87,14 @@ class OrderController extends Controller
                 'total' => $request->total
             ])->with('error', 'Transaction ID does not match. Please try again.');
         }
+        elseif($transaction->amount < $total){
+            return redirect()->route('order.pending',
+            [
+                'order_id' => $request->order_id, 
+                'total' => $request->total
+            ])->with('error', 'Amount sent is less than the total that was to be paid.');
+
+        }
         else{
             DB::table('payments_completed')->insert(
                 [
@@ -95,7 +107,7 @@ class OrderController extends Controller
             
             DB::table('orders')
                 ->where('order_id', $request->order_id)
-                ->update(['order_status' => 'completed']);
+                ->update(['order_status' => 'PAID']);
 
             DB::table('payments_received')->where('transaction_id', $transaction_id)->delete();
 
