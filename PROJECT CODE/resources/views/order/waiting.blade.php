@@ -2,7 +2,21 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mt-5">
+
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+    
+    <p class="text-left lead">Please Enter The Transaction ID given to you by your bKash agent :</p>
+
     <form action="{{route('order.check_pay')}}" method="POST">
     @csrf
         <div class="input-group mb-3">
@@ -17,16 +31,7 @@
 
     </form>
 
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
-    @if (session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-    @endif
+
 </div>
 
 @endsection
