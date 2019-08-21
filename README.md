@@ -95,5 +95,6 @@ The admin  has a *dashboard* which contains information of
   * medicines and 
   * orders.
   
-
+## Conclusion
+This is a gateway for solving the problems for everything related to one's health; from his medicines to his doctors aswell.We designed this app , so that it can be easy to use.
 
