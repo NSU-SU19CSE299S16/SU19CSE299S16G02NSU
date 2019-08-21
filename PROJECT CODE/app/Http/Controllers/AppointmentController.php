@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Carbon\Carbon;
+
 
 class AppointmentController extends Controller
 {
@@ -20,5 +22,15 @@ class AppointmentController extends Controller
         return redirect()->route('doctor.index')->with('success', 'Appointment Successfully Requested. You will be notified after confirmation.');
 
     }
-   
+
+    public function approve(Request $request){
+        DB::table('appointments')
+            ->where('app_id', $request->id)
+            ->update(['app_date' => Carbon::now()->addDays(5)]);
+
+            return redirect()->route('admin.appointments')->with('success', 'Appointment Successfully Approved.');
+
+    }
+
+
 }

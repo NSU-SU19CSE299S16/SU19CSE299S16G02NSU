@@ -3,6 +3,14 @@
 @section('content')
 <div class="container">
 
+@if (session('success'))
+
+<div class="alert alert-success my-3" role="alert">
+  {{session('success')}}
+</div>
+
+@endif
+
     <div class="d-flex justify-content-between">
         <h4 class="admin-heading">Appointments</h4>
     </div>
@@ -39,7 +47,9 @@
                 <td>{{$app->created_at}}</td>
                 <td>{{$app->updated_at}}</td>
                 <td>
-                    <form action="{{route('appointment.approve', ['id' => $app->app_id])}}" method="GET">
+                    <form action="{{route('appointment.approve')}}" method="POST">
+                        @csrf
+                    <input type="hidden" name="id" value="{{$app->app_id}}">
                     <button type="submit" class="btn btn-warning">Approve</button>
                     </form>
                 </td>
