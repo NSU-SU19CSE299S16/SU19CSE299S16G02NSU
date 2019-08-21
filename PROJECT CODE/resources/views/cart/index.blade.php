@@ -70,7 +70,7 @@
 				<form action="{{route('cart.checkout')}}" class="align-self-start mx-2" method="GET">
 					<button type="submit" class="crt-btn">Proceed To Checkout</button>
 				</form>
-				<form action="#" class="align-self-end mx-2" method="GET">
+				<form action="{{route('home')}}" class="align-self-end mx-2" method="GET">
 					<button type="submit" class="crt-btn">Continue Shopping</button>
 				</form>
 
