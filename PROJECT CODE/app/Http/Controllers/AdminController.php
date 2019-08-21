@@ -25,4 +25,13 @@ class AdminController extends Controller
         return view('admin.order.orders',['orders'=>$orders]);
     }
 
+    public function appointments(){
+
+        $apps = DB::table('appointments')->get();
+        $users = DB::table('users')->get();
+        $docs = DB::table('doctors')->get();
+    
+        return view('admin.appointments.appointments',['apps' => $apps, 'users' => $users,'docs' => $docs]);
+    }
+
 }
