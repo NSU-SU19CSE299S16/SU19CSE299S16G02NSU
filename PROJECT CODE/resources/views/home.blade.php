@@ -1,11 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="home-section">
+    <div class="container">
+        <div class="homepage-text">
+        <h1 class="text-left display-3">Welcome To HAMDS<h1>
+        <h5 class="lead text-left">The largest online healthcare website in Bangladesh</h5>
+        <div class="text-left mt-4">
+            <button class="mr-2"><a class="" href="{{route('medicine.index')}}">Medicines</a></button>
+            <button class=""><a class="" href="{{route('doctor.index')}}">Make Appointment</a></button>
+        </div>
+
+        </div>
+    </div>
+</div>
 <div class="container">
 
     <!-- Search Bar -->
 
-    <div class="row justify-content-center text-center my-4">
+
+    <!-- <div class="row justify-content-center text-center my-4">
         <div class="col-md-9">
             <form>
             <div class="input-group mb-3">
@@ -16,9 +30,9 @@
             </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
-    <h3>Featured Medicines</h3>
+    <h3 class="home-heading text-center my-5 underline-from-center">Featured Medicines</h3>
       
     @foreach($medicines->chunk(4) as $meds)
     <div class="row">
@@ -60,7 +74,14 @@
 
 
 
+
+
 </div>
+<div class="footer">
+        <div class="text-center">
+        &copyCopyright Hamds 2019
+        </div>
+    </div>
 @endsection
 
 
