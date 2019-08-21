@@ -11,13 +11,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
-$primary-color: #ef8354;
+$primary-color: #3c7a89;
 
 $navheight: 4rem;
 
-searchBar {
-    width: 100%;
-}
 a {
     text-decoration: none;
 }
@@ -25,6 +22,35 @@ html,
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #fff;
+}
+.underline-from-center {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background: #2980b9;
+        height: 2px;
+        -webkit-transition-property: left right;
+        transition-property: left right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover:before {
+        left: 0;
+        right: 0;
+    }
 }
 .navbar-brand {
     font-family: "Monoton", cursive;
@@ -44,10 +70,29 @@ body {
     }
 }
 .page-heading {
-    border-bottom: 1.5px solid rgba(#9fb1bc, 0.2);
+    border-bottom: 1.5px solid rgba(#9fb1bc, 0.5);
     padding-bottom: 1rem;
 }
+.home-heading {
+    //border-bottom: 1.5px solid rgba(#9fb1bc, 0.6);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
+.parallax-section {
+    /* The image used */
+    background-image: url("../../public/assets/homepage.jpg");
+
+    /* Set a specific height */
+    height: 20vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 div {
     display: block;
 }
@@ -59,6 +104,7 @@ div {
 .homepage-text {
     padding-top: 20vh;
     color: #e2dedd;
+
     h1 {
         font-family: "Lobster", cursive;
     }

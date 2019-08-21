@@ -32,7 +32,7 @@
         </div>
     </div> -->
 
-    <h3>Featured Medicines</h3>
+    <h3 class="home-heading text-center my-5 underline-from-center">Featured Medicines</h3>
       
     @foreach($medicines->chunk(4) as $meds)
     <div class="row">
@@ -69,6 +69,9 @@
     </div>    
     @endforeach
 
+    <div class="parallex-section">
+        
+    </div>
 
 
 
