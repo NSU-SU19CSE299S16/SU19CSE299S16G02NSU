@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-3">
 
 @if (session('success'))
 <div class="alert alert-success">
@@ -13,7 +13,7 @@
     {{ session('error') }}
 </div>
 @endif
-    <h4>Please Select Payment Method</h4>
+    <h4 class="page-heading">Please Select Payment Method</h4>
     <br>
     <br>
     <form action="{{route('orders.store')}}" method="POST">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-3">
-
+<h4 class="page-heading my-3">Your Cart</h4>
 @if (session('success'))
 <div class="alert alert-success">
 	{{ session('success') }}
