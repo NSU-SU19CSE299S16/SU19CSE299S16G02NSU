@@ -16,6 +16,19 @@ class AdminController extends Controller
         return view('admin.dashboard',['med_count'=>$med_count,  'order_count'=>$order_count, 'user_count'=>$user_count, 'doc_count'=>$doc_count]);
     }
 
+    public function medicines(){
+        $medicines = DB::table('medicines')->get();
+
+        return view('admin.medicine.medicines', ['medicines' => $medicines]);
+    }
+
+    public function doctors(){    
+        $doctors = DB::table('doctors')->get();
+        return view('admin.doctor.doctors', ['doctors' => $doctors]);
+    
+    }
+
+
     public function orders(){
         $orders= DB::table('orders')
             ->join('users', 'orders.user_id', '=', 'users.id')

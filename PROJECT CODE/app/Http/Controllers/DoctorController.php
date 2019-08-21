@@ -22,11 +22,6 @@ class DoctorController extends Controller
     }
     
     //show all doctor (admin panel)
-    public function adminIndex(){    
-        $doctors = DB::table('doctors')->get();
-        return view('admin.doctor.doctors', ['doctors' => $doctors]);
-    
-    }
 
     //show the add doctor form
 

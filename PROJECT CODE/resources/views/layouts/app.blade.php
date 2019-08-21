@@ -53,9 +53,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}" style="font-size: 1rem;"><i class="fas fa-shopping-cart"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/admin">Admin</a>
-                        </li>
 
                         <!-- Authentication Links -->
                         @guest
@@ -76,10 +73,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">                              
                                     <a class="dropdown-item" href="{{ route('order.past_orders') }}">
                                        View Past Orders
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('profile') }}">
-                                        Account Settings
-                                    </a>      
+                                    </a>   
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
