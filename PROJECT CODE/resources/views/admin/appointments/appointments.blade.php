@@ -4,43 +4,37 @@
 <div class="container">
 
     <div class="d-flex justify-content-between">
-        <h4 class="admin-heading"><i class="fas fa-pills"></i> Medicines</h4>
-
-        <div class="admin-add-btn"><a href="{{route('medicine.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
+        <h4 class="admin-heading"><i class="fas fa-pills"></i> apps</h4>
     </div>
 
 
     <table class="mt-4 table table-striped table-hover">
         <thead class="thead-dark">
             <tr class="">
-            <th scope="col">ID</th>
-            <th scope="col">Medicine Name</th>
-            <th scope="col">In Stock</th>
-            <th scope="col">Price</th>
-            <th scope="col">Added</th>
-            <th scope="col">Updated</th>
-            <th scope="col" colspan="2">Actions</th>
+            <th scope="col">Appointment ID</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Appointment Date</th>
+            <th scope="col">Added On</th>
+            <th scope="col">Updated On</th>
+            <th scope="col">Approval</th>
+            
             </tr>
         </thead>
         <tbody>
-            @foreach($medicines as $medicine)
+            @foreach($apps as $app)
                 <tr>
-                <th scope="row">{{$medicine->med_id}}</th>
-                <td>{{$medicine->med_name}}</td>
-                <td>{{$medicine->med_stock}}</td>
-                <td>{{$medicine->med_price}}</td>
-                <td>{{$medicine->created_at}}</td>
-                <td>{{$medicine->updated_at}}</td>
-                <td>
-                <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                </form>
-                </td>
-                <td>
-                <form action="{{route('medicine.edit', ['id' => $medicine->med_id])}}" method="GET">
-                <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
-                </form>
-                </td>
+                <th scope="row">{{$app->app_id}}</th>
+                @foreach($users as $user)
+                @if($user->id == $app->user_id)
+                <td>{{$user->name}}</td>
+                @endif
+                @endforeach
+                @foreach($docs as $doc)
+                @if($doc->doc_id == $app->doctor_id)
+                <td>{{$doc->doc_name}}</td>
+                @endif
+                @endforeach
                 </tr>
             @endforeach
         </tbody>

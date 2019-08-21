@@ -29,8 +29,9 @@ class AdminController extends Controller
 
         $apps = DB::table('appointments')->get();
         $users = DB::table('users')->get();
+        $docs = DB::table('doctors')->get();
     
-        return view('admin.appointments.appointments',['apps' => $apps, 'users' => $users]);
+        return view('admin.appointments.appointments',['apps' => $apps, 'users' => $users,'docs' => $docs]);
     }
 
 }
